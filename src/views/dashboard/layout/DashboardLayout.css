@@ -1,0 +1,14 @@
+.wrap {
+    display: flex;
+    width: 100%;
+}
+
+.left {
+    width: 30%;
+    background: darkorange;
+}
+
+.right {
+    width: 70%;
+    background: darkred;
+}
