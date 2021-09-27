@@ -4,11 +4,11 @@
 }
 
 .left {
-    width: 30%;
-    background: darkorange;
+    width: 19%;
+    /* background: darkorange; */
 }
 
 .right {
-    width: 70%;
-    background: darkred;
+    width: 81%;
+    /* background: darkred; */
 }
