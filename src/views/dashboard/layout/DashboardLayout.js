@@ -4,7 +4,9 @@ import { ThemeContext } from "../../../contexts/theme";
 import TopNav from "../../../components/topNav/TopNav"
 import "./DashboardLayout.css";
 const DashboardLayout = (props) => {
+
   const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
+  
   console.log("theme", theme);
   return (
     <div

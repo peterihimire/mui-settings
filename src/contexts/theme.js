@@ -2,11 +2,19 @@ import { createContext, useEffect, useState } from "react";
 
 const themes = {
   dark: {
-    background: "black",
+    background: "#181818",
+    color: "white",
+  },
+  dark_light: {
+    background: "#212121",
     color: "white",
   },
   light: {
     background: "white",
+    color: "black",
+  },
+  light_dark: {
+    background: "#F1F1F1",
     color: "black",
   },
 };
