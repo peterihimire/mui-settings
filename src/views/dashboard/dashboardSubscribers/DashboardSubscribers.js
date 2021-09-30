@@ -41,7 +41,6 @@ const DashboardSubscribers = () => {
           {tabOne && (
             <>
               <SearchFilter />
-              {/* <h3>Tab one</h3> */}
               <Table />
             </>
           )}
