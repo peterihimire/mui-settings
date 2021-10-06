@@ -1,0 +1,9 @@
+.img-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img-col img{
+    margin-right: 5px;
+}
