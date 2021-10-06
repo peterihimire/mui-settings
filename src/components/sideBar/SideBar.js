@@ -22,7 +22,7 @@ const SideBar = () => {
   useEffect(() => {
     setActiveOne(true);
     history.push("/dashboard/home");
-  }, []);
+  }, [history]);
 
   const handleClickOne = () => {
     setActiveOne(true);
