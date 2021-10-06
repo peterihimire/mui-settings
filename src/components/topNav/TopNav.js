@@ -1,15 +1,16 @@
 import React, { useContext } from "react";
 import "./TopNav.css";
-import { BiSearch, BiSun } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import { ThemeContext } from "../../contexts/theme";
-import Button from "@mui/material/Button";
-import AddButton from "../Button/AddButton";
+// import Button from "@mui/material/Button";
+// import AddButton from "../Button/AddButton";
 import ICON from "../../assets/images/profile-img.png";
 import TOGGLE from "../../assets/images/toggle.png";
 
 const TopNav = () => {
-  const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
+  const [toggleTheme] = useContext(ThemeContext);
+  // const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
 
   return (
     <div className='top-nav-wrapper'>
@@ -19,7 +20,7 @@ const TopNav = () => {
       </div>
 
       <div className='other-nav-content'>
-          <div style={{ marginRight: "40px" }}><AddButton /></div>
+          {/* <div style={{ marginRight: "40px" }}><AddButton /></div> */}
         <div>
         <img src={TOGGLE} alt='ICON' onClick={toggleTheme} /></div>
         <div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { BiSearch, BiSun } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import "./SearchFilter.css";
 
