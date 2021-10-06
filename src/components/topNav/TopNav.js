@@ -9,8 +9,8 @@ import ICON from "../../assets/images/profile-img.png";
 import TOGGLE from "../../assets/images/toggle.png";
 
 const TopNav = () => {
-  const [toggleTheme] = useContext(ThemeContext);
-  // const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
+  // const [toggleTheme] = useContext(ThemeContext);
+  const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
 
   return (
     <div className='top-nav-wrapper'>
