@@ -18,7 +18,7 @@ const DashboardRolesManagment = () => {
 
   return (
     <div className='subscribers-wrapper'>
-      <h1>Roles Managment</h1>
+      <h1>Roles Management</h1>
       <div className='tab-wrapper'>
         <ul className='tab-container'>
           <li

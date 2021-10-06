@@ -35,7 +35,7 @@ function Dashboard(props) {
         <Route path={`${path}/insight`}>
           <DashboardInsight />
         </Route>
-        <Route path={`${path}/roles-managment`}>
+        <Route path={`${path}/roles-management`}>
           <DashboardRolesManagment />
         </Route>
         <Route path={`${path}/subscribers`}>
