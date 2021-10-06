@@ -1,0 +1,122 @@
+.auth-wrapper {
+  background: #1e1e1e;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.welcome-message {
+  margin: auto 7rem;
+  text-align: center;
+}
+
+.welcome-message img {
+  margin-bottom: 3rem;
+}
+
+.welcome-title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  color: #f5f5ff;
+  margin-bottom: 1rem;
+}
+
+.welcome-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: rgba(244, 244, 244, 0.8);
+}
+
+.form-wrapper {
+  margin: auto 8rem;
+  color: #f5f5ff;
+}
+
+.auth-label {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.input-wrapper {
+  margin-bottom: 2rem;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  margin-top: 0.5rem;
+  background: #191919;
+  color: #f5f5ff;
+  outline: none;
+  border: none;
+}
+
+.button-wrapper button {
+  width: 100%;
+  padding: 1rem 0.5rem;
+  margin-top: 2rem;
+  background: #5d55ff;
+  color: #f5f5ff;
+  outline: none;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+.button-wrapper button:hover {
+  background: #392ff7;
+}
+
+.forget-password-link {
+  text-align: center;
+}
+
+.forget-password-link a {
+  color: #f5f5ff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 996px) {
+  /* styles */
+  .welcome-message {
+    margin: auto 2rem;
+    text-align: center;
+  }
+
+  .form-wrapper {
+    margin: auto 2rem;
+    color: #f5f5ff;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  /* styles */
+  .auth-wrapper {
+    background: #1e1e1e;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2rem 0.9rem;
+  }
+
+  .welcome-message {
+    margin: 0;
+    text-align: center;
+  }
+
+  .form-wrapper {
+    margin: 0;
+    color: #f5f5ff;
+  }
+
+  .welcome-message img {
+    width: 100%;
+  }
+}
