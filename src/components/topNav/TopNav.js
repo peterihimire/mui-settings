@@ -19,17 +19,22 @@ const TopNav = () => {
         <input type='text' placeholder='Search Cloudticians' />
       </div>
 
-      <div style={{ background: theme.background, color: theme.color }} className='other-nav-content'>
-          {/* <div style={{ marginRight: "40px" }}><AddButton /></div> */}
+      <div
+        style={{ background: theme.background, color: theme.color }}
+        className='other-nav-content'
+      >
+        {/* <div style={{ marginRight: "40px" }}><AddButton /></div> */}
         <div>
-        <img src={TOGGLE} alt='ICON' onClick={toggleTheme} /></div>
+          <img src={TOGGLE} alt='ICON' onClick={toggleTheme} />
+        </div>
         <div>
-        <img src={ICON} alt='img' /></div>
+          <img src={ICON} alt='img' />
+        </div>
         <div className='topnav-profile'>
           <h5>Priscilla Aimila</h5>
           <p>Administrator</p>
         </div>
-        <div >
+        <div>
           <IoIosArrowDown />
         </div>
       </div>
