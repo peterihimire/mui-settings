@@ -10,7 +10,7 @@ import TOGGLE from "../../assets/images/toggle.png";
 
 const TopNav = () => {
   // const [toggleTheme] = useContext(ThemeContext);
-  const [{ theme, isDark }, toggleTheme] = useContext(ThemeContext);
+  const [{ theme }, toggleTheme] = useContext(ThemeContext);
 
   return (
     <div className='top-nav-wrapper'>
@@ -19,7 +19,7 @@ const TopNav = () => {
         <input type='text' placeholder='Search Cloudticians' />
       </div>
 
-      <div className='other-nav-content'>
+      <div style={{ background: theme.background, color: theme.color }} className='other-nav-content'>
           {/* <div style={{ marginRight: "40px" }}><AddButton /></div> */}
         <div>
         <img src={TOGGLE} alt='ICON' onClick={toggleTheme} /></div>
