@@ -1,0 +1,44 @@
+.side-bar-wrapper {
+  padding: 1.5rem 0 8rem;
+  width: 100%;
+  box-shadow: 4px 0px 10px rgba(131, 130, 130, 0.07);
+}
+
+.dashboard-logo {
+  padding: 0 1rem;
+}
+
+.dashboard-logo img {
+    width: 204px;
+    max-width: 100%;
+  }
+
+.dashboard-logo p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: .5rem;
+}
+
+.nav-links ul {
+  list-style-type: none;
+  margin-top: 2.5rem;
+}
+
+.nav-links ul li {
+  list-style-type: none;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  color: rgba(244, 244, 244, 0.8);
+}
+
+/* .nav-links ul li:hover {
+  background: #5d55ff;
+  color: rgba(244, 244, 244, 0.8);
+} */
+
+.active {
+  background: #5d55ff;
+  color: rgba(244, 244, 244, 0.8);
+}
