@@ -146,10 +146,10 @@ const SideBar = () => {
           </li>
           <li className={activeFour ? "active" : ""} onClick={handleClickFour}>
             <Link
-              to='/dashboard/roles-managment'
+              to='/dashboard/roles-management'
               style={{ color: theme.color }}
             >
-              Roles Managment
+              Roles Management
             </Link>
           </li>
           <li className={activeFive ? "active" : ""} onClick={handleClickFive}>

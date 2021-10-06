@@ -285,9 +285,6 @@ const Table = () => {
   return (
     <div style={{ height: 530, width: "100%" }} className={classes.root}>
       <DataGrid
-        // components={{
-        //   Toolbar: GridToolbar,
-        // }}
         rows={data}
         rowHeight={70}
         columns={columns}
