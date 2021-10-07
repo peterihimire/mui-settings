@@ -1,13 +1,11 @@
-.table_wrapper {
-    background: #181818;
-}
-
-/* .img-col{
+.img-col{
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
+
 .img-col img{
     margin-right: 5px;
-} */
+    color: rgba(191, 187, 248, 0.164);
+}

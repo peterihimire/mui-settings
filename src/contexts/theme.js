@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 const themes = {
   dark: {
     background: "#212121",
-    color: "#949494",
+    color: "#f5f5ff",
   },
   dark_light: {
     background: "#212121",
@@ -33,7 +33,7 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
       const isDark = localStorage.getItem("isDark") === "true"
-      setIsDark(isDark)
+      setIsDark(!isDark)
   }, [])
 
   return (
