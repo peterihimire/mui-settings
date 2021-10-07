@@ -290,7 +290,7 @@ const Table = () => {
 
   const classes = useStyles();
   return (
-    <div className="table_wrapper" style={{ height: 530, width: "100%", background: "#181818" }} className={classes.root}>
+    <div style={{ height: 530, width: "100%", background: "#181818" }} className={classes.root}>
       <DataGrid
         rows={data}
         rowHeight={70}
