@@ -3,33 +3,36 @@ import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/styles";
 import clsx from "clsx";
 import { useState } from "react";
-import Img from "../../../../assets/images/profile-img.png"
+import Img from "../../../../assets/images/profile-img.png";
 // import Dot from "../../../../assets/images/three-dot.png"
 import { ThemeContext } from "../../../../contexts/theme";
 import "./table.css";
 
-
 const columns = [
- 
   {
     field: "name",
     headerName: "Full Name",
-    width: 250,
+    width: 210,
     editable: true,
-    renderCell: (params) => <div className="img-col"> <img src={Img} alt="" /> {params.value}</div>,
+    renderCell: (params) => (
+      <div className='img-col'>
+        {" "}
+        <img src={Img} alt='' /> {params.value}
+      </div>
+    ),
     headerClassName: "super-app-theme--header",
   },
   {
     field: "email",
     headerName: "Email Address",
-    width: 250,
+    width: 220,
     editable: true,
     headerClassName: "super-app-theme--header",
   },
   {
     field: "activePlan",
     headerName: "Active Plan",
-    width: 200,
+    width: 160,
     editable: true,
     headerClassName: "super-app-theme--header",
     cellClassName: (params) =>
@@ -42,14 +45,14 @@ const columns = [
   {
     field: "expirePlan",
     headerName: "Plan Expires",
-    width: 200,
+    width: 160,
     type: "date",
     headerClassName: "super-app-theme--header",
   },
   {
     field: "country",
     headerName: "Country",
-    width: 200,
+    width: 160,
     headerClassName: "super-app-theme--header",
   },
   // {
@@ -66,58 +69,56 @@ const columns = [
 
 const data = [
   {
-    id:"1",
-    name:"Lucky Onoriode",
-    email:"luckyeonoriode@gmail.com",
+    id: "1",
+    name: "Lucky Onoriode",
+    email: "luckyeonoriode@gmail.com",
     activePlan: "Premium",
     expirePlan: "Dec 25, 2021",
-    country:"U.S.A",
-
+    country: "U.S.A",
   },
   {
-    id:"2",
-    name:"Kenneth Eguakun",
-    email:"kennethegua@yahoo.com",
+    id: "2",
+    name: "Kenneth Eguakun",
+    email: "kennethegua@yahoo.com",
     activePlan: "Free Trial",
     expirePlan: "Dec 25, 2021",
-    country:"Azerbaijan",
+    country: "Azerbaijan",
   },
   {
-    id:"3",
-    name:"Mayowa Adegunwa",
-    email:"mayowa.ade@gmail.com",
+    id: "3",
+    name: "Mayowa Adegunwa",
+    email: "mayowa.ade@gmail.com",
     activePlan: "Standard",
     expirePlan: "Dec 25, 2021",
-    country:"U.K",
+    country: "U.K",
   },
   {
-    id:"4",
-    name:"Obianjulu Anayo",
-    email:"obi.anayo@amazon.com",
+    id: "4",
+    name: "Obianjulu Anayo",
+    email: "obi.anayo@amazon.com",
     activePlan: "Premium",
     expirePlan: "Dec 25, 2021",
-    country:"Ghana",
-
+    country: "Ghana",
   },
   {
-    id:"5",
-    name:"Falade Adeola",
-    email:"thefalade@gmail.com",
+    id: "5",
+    name: "Falade Adeola",
+    email: "thefalade@gmail.com",
     activePlan: "Free Trial",
     expirePlan: "Dec 25, 2021",
-    country:"Nigeria",
-
+    country: "Nigeria",
   },
-]
+];
 
 const HomeTable = () => {
   const [pageSize, setPageSize] = useState(5);
-  const [{ theme, 
-    // isDark 
-  }, 
-  // toggleTheme
-] = useContext(ThemeContext);
-  
+  const [
+    {
+      theme,
+      // isDark
+    },
+    // toggleTheme
+  ] = useContext(ThemeContext);
 
   const useStyles = makeStyles({
     root: {
@@ -125,55 +126,62 @@ const HomeTable = () => {
         borderBottom: "16px solid #E5E5E5",
         padding: "10px",
         display: "block",
-        backgroundColor: theme.background,
+        // backgroundColor: theme.background,
+        backgroundColor: "#181818",
         color: theme.color,
       },
       "& .MuiDataGrid-row": {
-        backgroundColor: theme.background,
+        // backgroundColor: theme.background,
+        backgroundColor: "#181818",
         color: theme.color,
       },
       "& .MuiButton-textPrimary": {
         color: theme.color,
       },
       "& .super-app-theme--header": {
-        backgroundColor: theme.background,
+        // backgroundColor: theme.background,
+        backgroundColor: "#181818",
         color: theme.color,
       },
       "& .MuiDataGrid-columnHeaderWrapper": {
-        backgroundColor: theme.background,
+        // backgroundColor: theme.background,
+        backgroundColor: "#181818",
         color: theme.color,
       },
       "& .MuiDataGrid-root": {
-        backgroundColor: theme.background,
+        // backgroundColor: theme.background,
+        backgroundColor: "#181818",
         color: theme.color,
-        border: "none"
+        border: "none",
       },
       "& .super-app.indraft": {
         color: "#DDBDFF",
-        fontWeight: "bold"
+        fontWeight: "bold",
       },
       "& .super-app.premium": {
         color: "#029D2E",
         fontWeight: "bold",
-        border: "none"
+        border: "none",
       },
       "& .super-app.standard": {
         color: "#FFC44F",
-        fontWeight: "bold"
+        fontWeight: "bold",
       },
       "& .MuiDataGrid-columnSeparator": {
         display: "none",
       },
-      "& .MuiDataGrid-cell":  {
-        border: "none"
-    }
+      "& .MuiDataGrid-cell": {
+        border: "none",
+      },
+      "& .makeStyles-root-4": {
+        backgroundColor: "#181818",
+      },
     },
   });
 
-
   const classes = useStyles();
   return (
-    <div style={{ height: 530, width: "100%" }} className={classes.root}>
+    <div style={{ height: 530 }} className={classes.root}>
       <DataGrid
         rows={data}
         rowHeight={70}
