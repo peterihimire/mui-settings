@@ -33,7 +33,7 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
       const isDark = localStorage.getItem("isDark") === "true"
-      setIsDark(isDark)
+      setIsDark(!isDark)
   }, [])
 
   return (
