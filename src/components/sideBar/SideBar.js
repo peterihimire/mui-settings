@@ -4,6 +4,15 @@ import LOGO from "../../assets/images/dashboard-logo.svg";
 import { ThemeContext } from "../../contexts/theme";
 // import DASH from "../../assets/images/sideBar-icons/side-nav-dashboard-icon.png";
 import "./SideBar.css";
+import one from "../../assets/images/das.png";
+import two from "../../assets/images/cour.png";
+import three from "../../assets/images/sub.png";
+import four from "../../assets/images/rol.png";
+import five from "../../assets/images/web.png";
+import six from "../../assets/images/car.png";
+import seven from "../../assets/images/insig.png";
+import eight from "../../assets/images/support.png";
+import nine from "../../assets/images/case.png";
 
 const SideBar = () => {
   let history = useHistory();
@@ -134,64 +143,97 @@ const SideBar = () => {
       </div>
       <div className='nav-links'>
         <ul>
-          <li className={activeOne ? "active" : ""} onClick={handleClickOne}>
-            <Link to='/dashboard/home' style={{ color: theme.color }}>
+          <Link to='/dashboard/home' style={{ color: theme.color }}>
+            <li className={activeOne ? "active" : ""} onClick={handleClickOne}>
+              <span>
+                <img src={one} alt='img' />
+              </span>
               <span>Dashboard</span>
-            </Link>
-          </li>
-          <li className={activeTwo ? "active" : ""} onClick={handleClickTwo}>
-            <Link to='/dashboard/courses' style={{ color: theme.color }}>
-              Courses
-            </Link>
-          </li>
+            </li>
+          </Link>
+          <Link to='/dashboard/courses' style={{ color: theme.color }}>
+            <li className={activeTwo ? "active" : ""} onClick={handleClickTwo}>
+              <span>
+                <img src={two} alt='img' />
+              </span>
+              <span>Courses</span>
+            </li>
+          </Link>
 
-          <li
-            className={activeThree ? "active" : ""}
-            onClick={handleClickThree}
-          >
-            <Link to='/dashboard/subscribers' style={{ color: theme.color }}>
-              Subscribers
-            </Link>
-          </li>
-          <li className={activeFour ? "active" : ""} onClick={handleClickFour}>
-            <Link
-              to='/dashboard/roles-management'
-              style={{ color: theme.color }}
+          <Link to='/dashboard/subscribers' style={{ color: theme.color }}>
+            <li
+              className={activeThree ? "active" : ""}
+              onClick={handleClickThree}
             >
-              Roles Management
-            </Link>
-          </li>
-          <li className={activeFive ? "active" : ""} onClick={handleClickFive}>
-            <Link to='/dashboard/webinars' style={{ color: theme.color }}>
-              Webinars
-            </Link>
-          </li>
-          <li className={activeSix ? "active" : ""} onClick={handleClickSix}>
-            <Link to='/dashboard/careers' style={{ color: theme.color }}>
-              Careers
-            </Link>
-          </li>
-          <li
-            className={activeSeven ? "active" : ""}
-            onClick={handleClickSeven}
-          >
-            <Link to='/dashboard/insight' style={{ color: theme.color }}>
-              Insight
-            </Link>
-          </li>
-          <li
-            className={activeEight ? "active" : ""}
-            onClick={handleClickEight}
-          >
-            <Link to='/dashboard/support-ticket' style={{ color: theme.color }}>
-              Support Ticket
-            </Link>
-          </li>
-          <li className={activeNine ? "active" : ""} onClick={handleClickNine}>
-            <Link to='/dashboard/case-studies' style={{ color: theme.color }}>
-              Case Studies
-            </Link>
-          </li>
+              <span>
+                <img src={three} alt='img' />
+              </span>
+              <span>Subscribers</span>
+            </li>
+          </Link>
+          <Link to='/dashboard/roles-management' style={{ color: theme.color }}>
+            <li
+              className={activeFour ? "active" : ""}
+              onClick={handleClickFour}
+            >
+              <span>
+                <img src={four} alt='img' />
+              </span>
+              <span>Roles Management</span>
+            </li>
+          </Link>
+          <Link to='/dashboard/webinars' style={{ color: theme.color }}>
+            <li
+              className={activeFive ? "active" : ""}
+              onClick={handleClickFive}
+            >
+              <span>
+                <img src={five} alt='img' />
+              </span>
+              <span>Webinars</span>
+            </li>
+          </Link>
+          <Link to='/dashboard/careers' style={{ color: theme.color }}>
+            <li className={activeSix ? "active" : ""} onClick={handleClickSix}>
+              <span>
+                <img src={six} alt='img' />
+              </span>
+              <span>Careers</span>
+            </li>
+          </Link>
+          <Link to='/dashboard/insight' style={{ color: theme.color }}>
+            <li
+              className={activeSeven ? "active" : ""}
+              onClick={handleClickSeven}
+            >
+              <span>
+                <img src={seven} alt='img' />
+              </span>
+              <span>Insight</span>
+            </li>
+          </Link>
+          <Link to='/dashboard/support-ticket' style={{ color: theme.color }}>
+            <li
+              className={activeEight ? "active" : ""}
+              onClick={handleClickEight}
+            >
+              <span>
+                <img src={eight} alt='img' />
+              </span>
+              <span>Support Ticket</span>
+            </li>
+          </Link>
+          <Link to='/dashboard/case-studies' style={{ color: theme.color }}>
+            <li
+              className={activeNine ? "active" : ""}
+              onClick={handleClickNine}
+            >
+              <span>
+                <img src={nine} alt='img' />
+              </span>
+              <span>Case Studies</span>
+            </li>
+          </Link>
         </ul>
       </div>
     </div>
