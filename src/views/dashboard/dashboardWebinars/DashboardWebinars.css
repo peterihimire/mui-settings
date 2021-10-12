@@ -1,0 +1,58 @@
+.dashboard_webinars_wrapper h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.01em;
+  /* color: #f5f5ff; */
+}
+
+.webinar_contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.single_box {
+  background: #181818;
+  border-radius: 8px;
+}
+
+.single_box img {
+  width: 100%;
+}
+
+.single_box_contents {
+  background: #181818;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+.single_box_contents h3 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* color: #F5F5FF; */
+}
+
+.single_box_view {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.single_box_view p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ff8662;
+}
+
+.single_box_view span {
+    cursor: pointer;
+}
