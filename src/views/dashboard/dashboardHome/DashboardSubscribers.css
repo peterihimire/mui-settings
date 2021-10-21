@@ -75,6 +75,7 @@
   display: flex;
   margin: 30px 0;
   gap: 40px;
+  justify-content: space-between;
 }
 
 .chart_wrapper .chart {
@@ -82,13 +83,14 @@
   border-radius: 8px;
   max-width: 100%;
   background: #181818;
+  width: 100%;
 }
 
 .chart_wrapper .course_rank {
   background: #181818;
   border-radius: 8px;
-  width: 300px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 30%;
   padding: 20px 30px;
 }
 
@@ -151,6 +153,27 @@
   padding: 5px 20px 5px 20px;
 }
 
+.special-border {
+  opacity: 0.8;
+  border-left: 0.5px solid #f5f5ff;
+}
+
+/* .special-border {
+  color: rgba(244, 244, 244, 0.8);
+  position: relative;
+}
+
+.special-border:after {
+  content: "";
+  background: #ff8662;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 70px;
+} */
+
 .single_info_container p {
   font-style: normal;
   font-weight: 300;
@@ -164,11 +187,6 @@
 
 .increase span {
   color: rgba(244, 244, 244, 0.8) !important;
-}
-
-.special-border {
-  opacity: 0.8;
-  border-left: 0.5px solid #f5f5ff;
 }
 
 .single-details-wrapper {
