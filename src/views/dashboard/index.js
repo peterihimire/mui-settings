@@ -10,6 +10,7 @@ import DashboardRolesManagment from "./dashboardRolesManagment/DashboardRolesMan
 import DashboardLayout from "./layout/DashboardLayout";
 import DashboardSupportTicket from "./dashboardSupportTicket/DashboardSupportTicket";
 import DashboardWebinars from "./dashboardWebinars/DashboardWebinars";
+import WebinarsDetails from "./dashboardWebinars/WebinarsDetails/WebinarsDetails";
 
 function Dashboard(props) {
   const {
@@ -46,6 +47,9 @@ function Dashboard(props) {
         </Route>
         <Route path={`${path}/webinars`}>
           <DashboardWebinars />
+        </Route>
+        <Route path={`${path}/webinar/:id`}>
+          <WebinarsDetails />
         </Route>
       </Switch>
     </DashboardLayout>
