@@ -11,6 +11,7 @@ import DashboardLayout from "./layout/DashboardLayout";
 import DashboardSupportTicket from "./dashboardSupportTicket/DashboardSupportTicket";
 import DashboardWebinars from "./dashboardWebinars/DashboardWebinars";
 import WebinarsDetails from "./dashboardWebinars/WebinarsDetails/WebinarsDetails";
+import CoursesDetails from "./dashboardCourses/CoursesDetails/CoursesDetails";
 
 function Dashboard(props) {
   const {
@@ -32,6 +33,9 @@ function Dashboard(props) {
         </Route>
         <Route path={`${path}/courses`}>
           <DashboardCourses />
+        </Route>
+        <Route path={`${path}/course/:id`}>
+          <CoursesDetails />
         </Route>
         <Route path={`${path}/insight`}>
           <DashboardInsight />
