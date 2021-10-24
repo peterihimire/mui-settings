@@ -173,7 +173,7 @@ const data = [
 // ];
 
 
-const Table = () => {
+const Table = ({customData, customColumn}) => {
   const [pageSize, setPageSize] = useState(5);
   const [{ theme, 
     // isDark 
@@ -292,9 +292,9 @@ const Table = () => {
   return (
     <div style={{ height: 530, width: "100%", background: "#181818" }} className={classes.root}>
       <DataGrid
-        rows={data}
+        rows={customData || data}
         rowHeight={70}
-        columns={columns}
+        columns={customColumn || columns}
         pageSize={pageSize}
         loading={data.length === 0}
         onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}

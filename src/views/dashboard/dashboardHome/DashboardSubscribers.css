@@ -224,3 +224,102 @@
   letter-spacing: -0.01em;
   color: #f5f5ff;
 }
+.role__top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 28px;
+}
+.role__top--left{
+  color: #F4F4F4;
+  text-decoration: none;
+}
+.role__top--right{}
+.role__top--right span:first-child{
+  color:rgba(244, 244, 244, 0.6);;
+}
+.role__top--right span:last-child{
+  color: white;
+}
+.role__heading{
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.role__form{
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  grid-gap: 24px;
+}
+.role__form-details{
+  padding: 40px;
+  background-color: #191919;
+}
+.role__form-group{
+  margin-bottom: 24px;
+}
+.role__form-label{
+  font-size: 14px;
+  color: #F4F4F4;
+}
+.role__form-input{
+  width: 100%;
+  background-color: #212121;
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  color:#fff;
+  outline: none;
+  margin-top: 12px;
+}
+.role__form--checkboxes{
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.role__form--checkbox{
+  font-size: 12px;
+color: rgba(244, 244, 244, 0.8);
+
+}
+.role__form--checkbox span{
+  margin-left: 10px;
+}
+.role__people{
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+.role__button{
+  color: #fff;
+  background: #5D55FF;
+  width: 100%;
+  text-align: center;
+  border: none;
+  padding: 19px;
+  font-size: 15px;
+  color: #F5F5FF;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+.role__selectbox{
+  padding: 40px;
+  background-color: #191919;
+  flex: 1;
+}
+.role__selectbox h4.role__select--heading{
+  color: #F5F5FF;
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+.role__select{
+  width: 100%;
+  padding: 10px;
+  background-color: #212121;
+  color: rgba(244, 244, 244, 0.8);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}

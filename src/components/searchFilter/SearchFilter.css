@@ -45,8 +45,22 @@
   line-height: 20px;
   padding: 8px;
   margin-left: 20px;
+  width: max-content;
 }
 
 .single-icon {
     margin: 0 5px;
+}
+.single-button{
+  margin: 0 5px;
+  background: #5D55FF;
+  border-radius: 3px;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+.single-button img{
+  margin-right: 7px;
 }

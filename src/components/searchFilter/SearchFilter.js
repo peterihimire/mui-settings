@@ -3,7 +3,7 @@ import { BiSearch } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import "./SearchFilter.css";
 
-const SearchFilter = () => {
+const SearchFilter = ({placeholder, ExtraComponent}) => {
   return (
     <div className='Search-filter-wrapper'>
       <div className='search-container'>
@@ -12,7 +12,7 @@ const SearchFilter = () => {
         </span>
         <input
           type='text'
-          placeholder='Search list of individual subscribers'
+          placeholder={placeholder ||'Search list of individual subscribers'}
         />
       </div>
       <div className='search-other-components'>
@@ -44,6 +44,12 @@ const SearchFilter = () => {
               <IoIosArrowDown />
             </span>
           </li>
+            {
+              ExtraComponent &&
+            <li>
+                {ExtraComponent}
+            </li>
+            }
         </ul>
       </div>
     </div>
