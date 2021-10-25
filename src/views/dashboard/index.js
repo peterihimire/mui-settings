@@ -12,6 +12,7 @@ import DashboardSupportTicket from "./dashboardSupportTicket/DashboardSupportTic
 import DashboardWebinars from "./dashboardWebinars/DashboardWebinars";
 import WebinarsDetails from "./dashboardWebinars/WebinarsDetails/WebinarsDetails";
 import CoursesDetails from "./dashboardCourses/CoursesDetails/CoursesDetails";
+import AddDashboardRolesManagment from "./dashboardRolesManagment/AddDashboardRolesManagment";
 
 function Dashboard(props) {
   const {
@@ -39,6 +40,9 @@ function Dashboard(props) {
         </Route>
         <Route path={`${path}/insight`}>
           <DashboardInsight />
+        </Route>
+        <Route path={`${path}/roles-management/add`}>
+          <AddDashboardRolesManagment />
         </Route>
         <Route path={`${path}/roles-management`}>
           <DashboardRolesManagment />
