@@ -1,17 +1,22 @@
 import React from "react";
+import {Link, useLocation} from "react-router-dom"
 import SearchFilter from "../../../components/searchFilter/SearchFilter";
 import one from "../../../assets/images/Group 35.png";
 import "./DashboardCourses.css";
+import add from "../../../assets/images/add.png"
 import { BiDotsVerticalRounded } from "react-icons/bi";
-import { Link } from "react-router-dom";
 
 const DashboardCourses = () => {
+  const location = useLocation();
   return (
     <div className='courses_wrapper'>
       <h1>Courses</h1>
 
       <div className='search_filter_wrapper'>
-        <SearchFilter />
+        <SearchFilter
+        ExtraComponent={
+          <Link to={`${location.pathname}/add`} className='single-button'><img src={add} /> Add New</Link>
+        } />
       </div>
 
       <div className='courses_module'>

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import {Link, useLocation} from 'react-router-dom';
 import SearchFilter from "../../../components/searchFilter/SearchFilter";
 import Table from "../../../components/Table/Table";
+import add from "../../../assets/images/add.png"
 
 const DashboardCareers = () => {
+  const location = useLocation()
   const [tabOne, setTabOne] = useState(true);
   const [tabTwo, setTabTwo] = useState(false);
 
@@ -26,20 +29,24 @@ const DashboardCareers = () => {
             style={{ cursor: "pointer" }}
             onClick={handleTabOne}
           >
-            Individual <span className='tab-count1'>300</span>
+            Job Posted <span className='tab-count1'>13</span>
           </li>
           <li
             className={tabTwo ? "activeTab" : ""}
             style={{ cursor: "pointer" }}
             onClick={handleTabTwo}
           >
-            Business <span className='tab-count2'>200</span>
+          Submitted Applications <span className='tab-count2'>450</span>
           </li>
         </ul>
         <div className='tab-contents'>
           {tabOne && (
             <>
-              <SearchFilter />
+              <SearchFilter placeholder="Search Careers" 
+               ExtraComponent={
+                 <Link to={`${location.pathname}/add`} className='single-button'><img src={add} /> Add New</Link>
+               }
+              />
               <Table />
             </>
           )}
