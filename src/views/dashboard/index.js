@@ -14,6 +14,7 @@ import WebinarsDetails from "./dashboardWebinars/WebinarsDetails/WebinarsDetails
 import CoursesDetails from "./dashboardCourses/CoursesDetails/CoursesDetails";
 import AddDashboardRolesManagment from "./dashboardRolesManagment/AddDashboardRolesManagment";
 import DashboardCareersSingle from "./dashboardCareers/DashboardCareersSingle";
+import AddDashboardCareers from "./dashboardCareers/AddDashboardCareers";
 
 function Dashboard(props) {
   const {
@@ -27,12 +28,16 @@ function Dashboard(props) {
         <Route path={`${path}/home`}>
           <DashboardHome />
         </Route>
-        <Route path={`${path}/careers/add`}>
+        <Route path={`${path}/careers/:3987243`}>
           <DashboardCareersSingle />
+        </Route>
+        <Route exact path={`${path}/careers/add`}>
+          <AddDashboardCareers />
         </Route>
         <Route path={`${path}/careers`}>
           <DashboardCareers />
         </Route>
+        
         <Route path={`${path}/case-studies`}>
           <DashboardCaseStudies />
         </Route>

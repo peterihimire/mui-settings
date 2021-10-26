@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import {Link, useLocation} from 'react-router-dom';
+import { Link, useLocation, useHistory } from "react-router-dom";
 import SearchFilter from "../../../components/searchFilter/SearchFilter";
 import Table from "../../../components/Table/Table";
-import add from "../../../assets/images/add.png"
+import add from "../../../assets/images/add.png";
 
 const DashboardCareers = () => {
-  const location = useLocation()
+  const location = useLocation();
+  const history = useHistory()
+  console.log("Careers",location);
   const [tabOne, setTabOne] = useState(true);
   const [tabTwo, setTabTwo] = useState(false);
 
@@ -42,17 +44,34 @@ const DashboardCareers = () => {
         <div className='tab-contents'>
           {tabOne && (
             <>
-              <SearchFilter placeholder="Search Careers" 
-               ExtraComponent={
-                 <Link to={`${location.pathname}/add`} className='single-button'><img src={add} /> Add New</Link>
-               }
+              <SearchFilter
+                placeholder='Search Roles'
+                ExtraComponent={
+                  <Link
+                    to={`${location.pathname}/add`}
+                    className='single-button'
+                    // onClick={() => history.push('/dashboard/careers/add')}
+                  >
+                    <img src={add} alt='img'/> Add New
+                  </Link>
+                }
               />
               <Table />
             </>
           )}
           {tabTwo && (
             <>
-              <SearchFilter />
+              <SearchFilter
+                placeholder='Search Roles'
+                ExtraComponent={
+                  <Link
+                    to={`${location.pathname}/add`}
+                    className='single-button'
+                  >
+                    <img src={add} /> Add New
+                  </Link>
+                }
+              />
               <h3>Tab two</h3>
               {/* <Table /> */}
             </>
