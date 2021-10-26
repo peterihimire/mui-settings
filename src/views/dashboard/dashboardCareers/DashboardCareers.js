@@ -50,7 +50,6 @@ const DashboardCareers = () => {
                   <Link
                     to={`${location.pathname}/add`}
                     className='single-button'
-                    // onClick={() => history.push('/dashboard/careers/add')}
                   >
                     <img src={add} alt='img'/> Add New
                   </Link>

@@ -60,13 +60,8 @@
       border-radius: 4px;
       padding: 40px;
 
-      // .role__form{
-      //     display: grid;
-      //     grid-template-columns: 600px 1fr;
-      //     grid-gap: 24px;
-      //   }
+
       .role__form-details {
-        // padding: 40px;
         background-color: #191919;
       }
       .add_career_role__form-group {
@@ -91,9 +86,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
-        //   .add_career_role__form-group{
-        //     margin-bottom: 0px;
-        //   }
 
         .add_career_role__form-input {
           width: 100%;
@@ -103,7 +95,6 @@
           padding: 15px 10px;
           color: #fff;
           outline: none;
-          // margin-top: 12px;
         }
 
         .add_career_role__select {
@@ -142,7 +133,6 @@
         cursor: pointer;
       }
       .add_career_role__selectbox {
-        // padding: 40px;
         background-color: #191919;
         flex: 1;
 
