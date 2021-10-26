@@ -27,11 +27,11 @@ function Dashboard(props) {
         <Route path={`${path}/home`}>
           <DashboardHome />
         </Route>
+        <Route path={`${path}/careers/add`}>
+          <AddDashboardCareers />
+        </Route>
         <Route path={`${path}/careers`}>
           <DashboardCareers />
-        </Route>
-        <Route exact path={`${path}/careers/add`}>
-          <AddDashboardCareers />
         </Route>
         
         <Route path={`${path}/case-studies`}>
