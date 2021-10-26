@@ -8,7 +8,7 @@ const AddDashboardCareers = () => {
       <div className='add_career_redirect'>
         <div className='add_career_go_back'>
           <Link to='/dashboard/careers'>
-            <p>Back to Webinars</p>
+            <p>Back to carrers</p>
           </Link>
         </div>
         <div className='add_career_sub_title'>

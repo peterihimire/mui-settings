@@ -7,16 +7,16 @@ const AddInsight = () => {
     <div className='add_career_wrapper'>
       <div className='add_career_redirect'>
         <div className='add_career_go_back'>
-          <Link to='/dashboard/careers'>
-            <p>Back to Webinars</p>
+          <Link to='/dashboard/Insight'>
+            <p>Back to insight</p>
           </Link>
         </div>
         <div className='add_career_sub_title'>
-          <span className='special_text'>Carrers > </span> <span> Add New</span>
+          <span className='special_text'>Insight > </span> <span> Add New</span>
         </div>
       </div>
       <div className='add_career_header'>
-        <h1>Add Career</h1>
+        <h1>Add Insight</h1>
       </div>
 
       <div className='add_career_message_wrapper'>
