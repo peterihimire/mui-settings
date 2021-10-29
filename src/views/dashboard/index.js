@@ -16,6 +16,7 @@ import CoursesDetails from "./dashboardCourses/CoursesDetails/CoursesDetails";
 import AddDashboardRolesManagment from "./dashboardRolesManagment/AddDashboardRolesManagment";
 import AddDashboardCareers from "./dashboardCareers/AddDashboardCareers";
 import AddInsight from "./dashboardInsight/AddInsight/AddInsight";
+import DashboardProfile from "./dashboardProfile/DashboardProfile";
 
 function Dashboard(props) {
   const {
@@ -26,6 +27,10 @@ function Dashboard(props) {
   return (
     <DashboardLayout>
       <Switch>
+      {/*  */}
+      <Route path={`${path}/profile`}>
+          <DashboardProfile />
+        </Route>
         <Route path={`${path}/home`}>
           <DashboardHome />
         </Route>
