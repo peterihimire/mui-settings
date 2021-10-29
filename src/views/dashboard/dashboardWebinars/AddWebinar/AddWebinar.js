@@ -72,7 +72,8 @@ const AddWebinar = () => {
           </Link>
         </div>
         <div className='add_career_sub_title'>
-          <span className='special_text'>Webinars > </span> <span> Add New</span>
+          <span className='special_text'>Webinars &gt; </span>{" "}
+          <span> Add New</span>
         </div>
       </div>
       <div className='add_career_header'>
@@ -124,9 +125,9 @@ const AddWebinar = () => {
                   formats={formats}
                 />
               </div>
-              
+
               <h4 className='add_career_role__select--heading'>
-              Media Settings
+                Media Settings
               </h4>
 
               <div className='add_career_role__form-group'>
