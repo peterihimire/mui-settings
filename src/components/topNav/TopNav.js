@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import "./TopNav.css";
+import React, { useContext, useState } from "react";
+import "./TopNav.scss";
 import { BiSearch } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
 import { ThemeContext } from "../../contexts/theme";
@@ -7,10 +7,15 @@ import { ThemeContext } from "../../contexts/theme";
 // import AddButton from "../Button/AddButton";
 import ICON from "../../assets/images/profile-img.png";
 import TOGGLE from "../../assets/images/toggle.png";
+import NavDropDown from "../NavDropDown/NavDropDown";
 
 const TopNav = () => {
-  // const [toggleTheme] = useContext(ThemeContext);
   const [{ theme }, toggleTheme] = useContext(ThemeContext);
+  const [dropdown, setDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdown(!dropdown);
+  };
 
   return (
     <div className='top-nav-wrapper'>
@@ -35,7 +40,14 @@ const TopNav = () => {
           <p>Administrator</p>
         </div>
         <div>
-          <IoIosArrowDown />
+          <div className='dropdown__icon'>
+            <IoIosArrowDown onClick={() => toggleDropdown()} />
+            {dropdown && (
+              <div className='view__dropdown'>
+                <NavDropDown />
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

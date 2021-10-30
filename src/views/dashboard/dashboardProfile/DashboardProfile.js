@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./dashboardProfile.scss";
 import img from "../../../assets/images/profile.png";
+import NavDropDown from "../../../components/NavDropDown/NavDropDown";
 
 const DashboardProfile = () => {
   const [tabOne, setTabOne] = useState(true);
@@ -53,14 +54,14 @@ const DashboardProfile = () => {
           {tabOne && (
             <>
               <div className='profile_tab_one'>
-                <h3>Tab one</h3>
+                {/* <h3>Tab one</h3> */}
               </div>
             </>
           )}
           {tabTwo && (
             <>
               <div className='profile_tab_two'>
-                <h3>Tab two</h3>
+                {/* <h3>Tab two</h3> */}
               </div>
             </>
           )}
