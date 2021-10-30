@@ -34,7 +34,7 @@ const NavDropDown = () => {
               <span>
                 <img src={four} alt='img' />
               </span>
-              <span>Roles Management</span>
+              <span>Roles</span>
             </li>
           </Link>
           <Link to='/dashboard/careers'>

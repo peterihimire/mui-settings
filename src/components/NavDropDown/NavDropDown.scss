@@ -3,12 +3,13 @@
   background: #191919;
   border-radius: 10px;
   padding: 20px;
-  width: 226px;
+  width: 160px;
+  z-index: 999;
 
   ul > a > li {
     font-style: normal;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 20px;
     display: flex;
     gap: 10px;
@@ -17,7 +18,7 @@
   }
 
   img {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
   }
 }

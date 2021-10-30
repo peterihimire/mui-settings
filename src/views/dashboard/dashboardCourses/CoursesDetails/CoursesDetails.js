@@ -3,6 +3,8 @@ import "./CoursesDetails.scss";
 import img from "../../../../assets/images/aws-2 2.png";
 import { Link } from "react-router-dom";
 import CoursedetailsTabs from "../coursedetailsTabs/CoursedetailsTabs";
+import DeleteModal from "../../../../components/Modal/DeleteModal/DeleteModal";
+import addimg from "../../../../assets/images/add.png";
 
 const CoursesDetails = () => {
   return (
@@ -14,7 +16,7 @@ const CoursesDetails = () => {
           </Link>
         </div>
         <div className='course_details_sub_title'>
-          <span className='special_text'>Roles > </span>{" "}
+          <span className='special_text'>Roles &gt; </span>{" "}
           <span> Administrator</span>
         </div>
       </div>
@@ -34,8 +36,9 @@ const CoursesDetails = () => {
           </p>
         </div>
         <div className='course_details_cta'>
-          <div className='cta__add'>Add New</div>
-          <div className='cta__delete'>Delete</div>
+          <div className='cta__add'><img src={addimg} alt="img" /> <p>Add New</p> </div>
+          {/* <div className='cta__delete'>Delete</div> */}
+          <DeleteModal />
         </div>
       </div>
 
