@@ -25,7 +25,7 @@ const customStyles = {
 };
 
 const DeleteModal = () => {
-  let subtitle;
+  // let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
 
   function openModal() {

@@ -8,6 +8,8 @@ import { ThemeContext } from "../../contexts/theme";
 import ICON from "../../assets/images/profile-img.png";
 import TOGGLE from "../../assets/images/toggle.png";
 import NavDropDown from "../NavDropDown/NavDropDown";
+// import addimg from "../../assets/images/add.png";
+import AddModal from "../Modal/AddModal/AddModal";
 
 const TopNav = () => {
   const [{ theme }, toggleTheme] = useContext(ThemeContext);
@@ -28,7 +30,11 @@ const TopNav = () => {
         style={{ background: theme.background, color: theme.color }}
         className='other-nav-content'
       >
-        {/* <div style={{ marginRight: "40px" }}><AddButton /></div> */}
+        <div className='add__new__user__wrapper'>
+          {/* <AddButton /> */}
+          {/* <div className='cta__add'><img src={addimg} alt="img" /> <p>Add New</p> </div> */}
+          <AddModal />
+          </div>
         <div>
           <img src={TOGGLE} alt='ICON' onClick={toggleTheme} />
         </div>

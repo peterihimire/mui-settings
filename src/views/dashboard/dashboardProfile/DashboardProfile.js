@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./dashboardProfile.scss";
 import img from "../../../assets/images/profile.png";
-import NavDropDown from "../../../components/NavDropDown/NavDropDown";
+// import NavDropDown from "../../../components/NavDropDown/NavDropDown";
 
 const DashboardProfile = () => {
   const [tabOne, setTabOne] = useState(true);
