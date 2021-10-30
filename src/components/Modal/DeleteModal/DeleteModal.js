@@ -1,16 +1,26 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
-import './DeleteModal.scss';
-import deleteimg from '../../../assets/images/delete.png';
+import React, { useState } from "react";
+import Modal from "react-modal";
+import "./DeleteModal.scss";
+import deleteimg from "../../../assets/images/delete.png";
+import delModalimg from "../../../assets/images/delModal.png";
+import { IoMdClose } from "react-icons/io";
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    backgroundColor: "#000000",
+    border: "none",
+    borderRadius: "10px",
+    filter: "drop-shadow(0px 12px 24px rgba(25, 25, 25, 0.32))",
+    width: "300px",
+    // height: "400px",
+    // scrollbarWidth: "none",
+    // overflow: "hidden",
   },
 };
 
@@ -24,7 +34,7 @@ const DeleteModal = () => {
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
+    // subtitle.style.color = '#f00';
   }
 
   function closeModal() {
@@ -34,27 +44,38 @@ const DeleteModal = () => {
   return (
     <div>
       {/* <button onClick={openModal}>Open Modal</button> */}
-      <div className='cta__delete2' onClick={openModal}><img src={deleteimg} alt="deleteimg" /> <p>Delete</p> </div>
+      <div className='cta__delete2' onClick={openModal}>
+        <img src={deleteimg} alt='deleteimg' /> <p>Delete</p>{" "}
+      </div>
       <Modal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel="Example Modal"
+        contentLabel='Example Modal'
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
+        <div className='cancel-btn'>
+          <button onClick={closeModal}><IoMdClose /></button>
+        </div>
+
+        <div className='delete__modal__content'>
+          <img src={delModalimg} alt='delModalimg' />
+          <h2>You want to Delete?</h2>
+          <p>
+            Once you confirm delete, you can not undo your actions and all
+            information relating to the content will be lost.
+          </p>
+
+          <form>
+            <div className='confirm__password'>
+              <input type='password' placeholder='Enter your password' />
+              <button type='submit'>Delete</button>
+            </div>
+          </form>
+        </div>
       </Modal>
     </div>
   );
-}
+};
 
 export default DeleteModal;

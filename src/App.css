@@ -74,5 +74,5 @@ li {
 }
 
 .ReactModal__Overlay {
-  background-color: rgba(26, 21, 21, 0.7) !important;
+  background-color: transparent !important;
 }
