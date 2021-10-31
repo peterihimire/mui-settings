@@ -246,7 +246,17 @@
   font-size: 32px;
   margin-bottom: 40px;
 }
-
+.career__heading{
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+.career__subheading{
+  color: rgba(244, 244, 244, 0.8);
+  font-size: 14px;
+}
+.career__subheading span{
+  margin-right: 15px;
+}
 .role__form{
   display: grid;
   grid-template-columns: 600px 1fr;
