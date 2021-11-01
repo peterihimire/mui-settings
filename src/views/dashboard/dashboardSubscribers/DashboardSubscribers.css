@@ -45,3 +45,224 @@
   /* background: rgba(245, 245, 255, 0.2); */
   border-radius: 32px;
 }
+
+/* SUPPORT TICKETS */
+.support-content{
+  background-color: #181818;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 419px 1fr;
+  margin-top: 40px;
+}
+.alltickets{
+  padding: 32px;
+  border-right: 1px solid white;
+}
+.allticket__search{
+  background-color:#212121;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 4px;
+}
+.allticket__search > input{
+  font-size: 14px;
+  margin:0px;
+  padding: 0px;
+  background-color: transparent;
+  border: none;
+  flex: 1;
+  color: rgba(244, 244, 244, 0.8);
+  margin-left: 14px;
+}
+
+.allticket__unread{
+  list-style: none;
+  margin-top: 35px;
+}
+.dotted-box{
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.dotted{
+  flex: 1;
+  border: 0.3px dashed #F5F5FF;
+  height: 1px;
+}
+.dotted-text{
+  color: rgba(244, 244, 244, 0.8);
+  font-size: 12px;
+  margin-left: 11px;
+}
+.dotted-num{
+  margin-right: 11px;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: rgba(244, 244, 244, 0.4);
+  color: rgba(244, 244, 244, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin: 0px 11px 0px 2px;
+}
+.allticket__item{
+  margin-bottom: 32px;
+  padding: 12px 12px 6px;
+}
+.allticket__unread--heading{
+  display: flex;
+  align-items: flex-start;
+}
+.avatar{
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 50%;
+  color: White;
+  display: grid;
+  place-content: center;
+  background: #212121;
+}
+.allticket__unread--name{
+  flex: 1;
+  margin-left: 16px;
+  margin-bottom: 16px;
+}
+.allticket__unread--name > h3{
+  font-size: 17px;
+  color: #F5F5FF;
+  font-size: 700;
+}
+.allticket__unread--name > p{
+  color: rgba(244, 244, 244, 0.8);
+  font-size: 12px;
+}
+.allticket__unread--time{
+  color: #F5F5FF;
+  font-size: 12px;
+}
+.allticket__unread--text{
+  display: flex;
+}
+.allticket__unread--text > p{
+  color: #F5F5FF;
+  flex: 1;
+  font-size: 14px;
+  margin-right: 24px;
+}
+.allticket__unread--text > span{
+  width: 23px;
+  height: 23px;
+  background-color: #FF8662;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+.allticket__item--active{
+  background: #212121;
+  border-radius: 8px;
+}
+.ticket{
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+}
+.ticket__chatheading{
+  display: flex;
+  padding: 24px 0px;
+  border-bottom: 0.3px solid #F5F5FF;
+}
+.ticket__chatheading > span{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #212121;
+  display: grid;
+  place-content: center;
+  color: #F5F5FF;
+  font-weight: 700;
+}
+.ticket__chatheading--name{
+  flex: 1;
+  margin-left: 16px;
+}
+.ticket__chatheading--name > h3{
+  font-size: 17px;
+  color: #F5F5FF;
+  margin-bottom: 4px;
+}
+.ticket__chatheading--name > p{
+  font-size: 12px;
+  color: rgba(244, 244, 244, 0.8);
+}
+.ticket__chatbody{
+  padding: 32px 0px;
+  flex: 1;
+}
+.ticket__chatbody--time{
+  text-align: center;
+  font-size: 12px;
+  color:rgba(244, 244, 244, 0.8);
+  margin-bottom: 40px;
+  margin-top: 
+}
+.ticket__chatbody--receive,
+.ticket__chatbody--send{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 24px;
+}
+.ticket__chatbody--receiveavatar,
+.ticket__chatbody--sendavatar{
+  width: 40px;
+  height: 40px;
+  border-radius:50%;
+  background: #212121;
+  display: grid;
+  place-content: center;
+}
+.ticket__chatbody--receivetext,
+.ticket__chatbody--sendtext{
+  max-width: 378px;
+  background: #212121;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 0px 24px 0px 12px;
+  color: rgba(244, 244, 244, 0.8);
+}
+.ticket__chatbody--receivetime,
+.ticket__chatbody--sendtime{
+  align-self: flex-end;
+  color: rgba(244, 244, 244, 0.8);
+  font-size: 12px;
+}
+.ticket__chatbody--send{
+  width: fit-content;
+  margin-left: auto;
+}
+.ticket__form{
+  width: 100%;
+  display: flex;
+  background: #212121;
+  border-radius: 8px;
+  display: flex;
+  padding: 8px;
+}
+.ticket__form > img{
+  background-color: #191919;
+  padding: 17px;
+  border-radius: 8px;
+}
+.ticket__input{
+  color: rgba(244, 244, 244, 0.8);
+  padding: 12px 16px;
+  flex: 1;
+  font-size: 17px;
+  background-color: transparent;
+  border: none;
+}

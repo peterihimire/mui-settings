@@ -7,7 +7,7 @@ import add from "../../../assets/images/add.png"
 
 const DashboardRolesManagment = () => {
   const location = useLocation()
-  console.log(location, "from the stuff")
+
   return (
     <div className='subscribers-wrapper'>
       <h1>Roles Management</h1>
