@@ -4,36 +4,25 @@
     display: flex;
     justify-content: space-between;
     .course_details_go_back {
-        p {
-          font-style: normal;
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 20px;
-          display: flex;
-          align-items: center;
-          color: rgba(244, 244, 244, 0.8);
-        }
-      }
-      .course_details_sub_title {
-        display: flex;
-        flex-direction: row;
-        display: flex;
-        align-items: center;
-        text-align: right;
+      p {
+        font-style: normal;
+        font-weight: normal;
         font-size: 14px;
         line-height: 20px;
-        .special_text {
-          font-style: normal;
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 20px;
-          display: flex;
-          align-items: center;
-          color: rgba(244, 244, 244, 0.8);
-          margin-right: 5px;
-        }
+        display: flex;
+        align-items: center;
+        color: rgba(244, 244, 244, 0.8);
       }
-    .special_text {
+    }
+    .course_details_sub_title {
+      display: flex;
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      text-align: right;
+      font-size: 14px;
+      line-height: 20px;
+      .special_text {
         font-style: normal;
         font-weight: normal;
         font-size: 14px;
@@ -43,6 +32,17 @@
         color: rgba(244, 244, 244, 0.8);
         margin-right: 5px;
       }
+    }
+    .special_text {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      color: rgba(244, 244, 244, 0.8);
+      margin-right: 5px;
+    }
   }
   .course_details__header {
     display: flex;
@@ -69,18 +69,33 @@
     }
     .course_details_cta {
       display: flex;
-      //   margin-top: 40px;
-      justify-content: end;
+      justify-content: flex-end;
       align-items: flex-end;
       .cta__add {
         background: #5d55ff;
         border-radius: 3px;
         outline: none;
         cursor: pointer;
-        padding: 8px 20px;
+        padding: 8px 10px;
         height: 40px;
         border: none;
         margin-right: 10px;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 17px;
+        letter-spacing: 0.01em;
+        color: rgba(244, 244, 244, 0.8);
+
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 17px;
+          height: 17px;
+          margin-right: 4px;
+        }
       }
       .cta__delete {
         border: 1px solid #ff8662;
@@ -91,6 +106,7 @@
         cursor: pointer;
         padding: 8px 20px;
         height: 40px;
+        color: rgba(244, 244, 244, 0.8);
       }
     }
   }

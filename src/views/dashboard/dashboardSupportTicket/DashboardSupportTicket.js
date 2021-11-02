@@ -165,4 +165,4 @@ const DashboardSupportTicket = () => {
     )
 }
 
-export default DashboardSupportTicket
+export default DashboardSupportTicket;

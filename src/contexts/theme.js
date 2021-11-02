@@ -10,8 +10,8 @@ const themes = {
     color: "#F5F5FF",
   },
   light: {
-    background: "white",
-    color: "black",
+    background: "#212121",
+    color: "#F5F5F",
   },
   light_dark: {
     background: "#F1F1F1",

@@ -8,15 +8,24 @@ import four from "../../../assets/images/Bg-03 (3).png";
 import five from "../../../assets/images/Bg-03 (4).png";
 import six from "../../../assets/images/Bg-03 (5).png";
 import { BiDotsVerticalRounded } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import add from "../../../assets/images/add.png";
 
 const DashboardWebinars = () => {
+  const location = useLocation();
   return (
     <div className='dashboard_webinars_wrapper'>
       <h1>Webinars</h1>
 
       <div className='search_filter_wrapper'>
-        <SearchFilter />
+        <SearchFilter
+          placeholder='Search Roles'
+          ExtraComponent={
+            <Link to={`${location.pathname}/add`} className='single-button'>
+              <img src={add} alt='img' /> Add New
+            </Link>
+          }
+        />
       </div>
 
       <div className='webinar_contents'>

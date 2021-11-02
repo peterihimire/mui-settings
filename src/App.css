@@ -72,3 +72,7 @@ ul {
 li {
   cursor: pointer;
 }
+
+.ReactModal__Overlay {
+  background-color: transparent !important;
+}

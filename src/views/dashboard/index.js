@@ -10,11 +10,14 @@ import DashboardRolesManagment from "./dashboardRolesManagment/DashboardRolesMan
 import DashboardLayout from "./layout/DashboardLayout";
 import DashboardSupportTicket from "./dashboardSupportTicket/DashboardSupportTicket";
 import DashboardWebinars from "./dashboardWebinars/DashboardWebinars";
+import AddWebinar from "./dashboardWebinars/AddWebinar/AddWebinar";
 import WebinarsDetails from "./dashboardWebinars/WebinarsDetails/WebinarsDetails";
 import CoursesDetails from "./dashboardCourses/CoursesDetails/CoursesDetails";
 import AddDashboardRolesManagment from "./dashboardRolesManagment/AddDashboardRolesManagment";
 import DashboardCareersSingle from "./dashboardCareers/DashboardCareersSingle";
 import AddDashboardCareers from "./dashboardCareers/AddDashboardCareers";
+import AddInsight from "./dashboardInsight/AddInsight/AddInsight";
+import DashboardProfile from "./dashboardProfile/DashboardProfile";
 
 function Dashboard(props) {
   const {
@@ -25,6 +28,10 @@ function Dashboard(props) {
   return (
     <DashboardLayout>
       <Switch>
+      {/*  */}
+      <Route path={`${path}/profile`}>
+          <DashboardProfile />
+        </Route>
         <Route path={`${path}/home`}>
           <DashboardHome />
         </Route>
@@ -47,6 +54,9 @@ function Dashboard(props) {
         <Route path={`${path}/course/:id`}>
           <CoursesDetails />
         </Route>
+        <Route path={`${path}/insight/add`}>
+          <AddInsight />
+        </Route>
         <Route path={`${path}/insight`}>
           <DashboardInsight />
         </Route>
@@ -61,6 +71,12 @@ function Dashboard(props) {
         </Route>
         <Route path={`${path}/subscribers`}>
           <DashboardSubscribers />
+        </Route>
+        <Route path={`${path}/support-ticket`}>
+          <DashboardSupportTicket />
+        </Route>
+        <Route path={`${path}/webinars/add`}>
+          <AddWebinar />
         </Route>
         <Route path={`${path}/webinars`}>
           <DashboardWebinars />
