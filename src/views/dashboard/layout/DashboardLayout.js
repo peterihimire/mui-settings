@@ -18,7 +18,7 @@ const DashboardLayout = (props) => {
 
       <div className='right'>
         <TopNav />
-        <div style={{ padding: "40px 40px" }}>{props.children}</div>
+        <div style={{ padding: "40px 20px" }}>{props.children}</div>
       </div>
     </div>
   );
