@@ -2,14 +2,13 @@ import React, { useContext, useState } from "react";
 import "./TopNav.scss";
 import { BiSearch } from "react-icons/bi";
 import { IoIosArrowDown } from "react-icons/io";
+import { RiBarChartHorizontalFill } from "react-icons/ri";
 import { ThemeContext } from "../../contexts/theme";
-// import Button from "@mui/material/Button";
-// import AddButton from "../Button/AddButton";
 import ICON from "../../assets/images/profile-img.png";
 import TOGGLE from "../../assets/images/toggle.png";
 import NavDropDown from "../NavDropDown/NavDropDown";
-// import addimg from "../../assets/images/add.png";
 import AddModal from "../Modal/AddModal/AddModal";
+import LOGO from "../../assets/images/dashboard-logo.svg";
 
 const TopNav = () => {
   const [{ theme }, toggleTheme] = useContext(ThemeContext);
@@ -21,6 +20,10 @@ const TopNav = () => {
 
   return (
     <div className='top-nav-wrapper'>
+      <div className='small_nav_logo'>
+        <img src={LOGO} alt='IMG' />
+      </div>
+
       <div className='search-wrapper'>
         <BiSearch />
         <input type='text' placeholder='Search Cloudticians' />
@@ -31,14 +34,12 @@ const TopNav = () => {
         className='other-nav-content'
       >
         <div className='add__new__user__wrapper'>
-          {/* <AddButton /> */}
-          {/* <div className='cta__add'><img src={addimg} alt="img" /> <p>Add New</p> </div> */}
           <AddModal />
-          </div>
+        </div>
         <div>
           <img src={TOGGLE} alt='ICON' onClick={toggleTheme} />
         </div>
-        <div>
+        <div className='add__new__user__img'>
           <img src={ICON} alt='img' />
         </div>
         <div className='topnav-profile'>
@@ -54,6 +55,9 @@ const TopNav = () => {
               </div>
             )}
           </div>
+        </div>
+        <div className='top-nav_icon'>
+          <RiBarChartHorizontalFill />
         </div>
       </div>
     </div>

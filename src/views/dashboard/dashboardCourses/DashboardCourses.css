@@ -1,5 +1,5 @@
-.courses_wrapper {
-}
+/* .courses_wrapper {
+} */
 
 .courses_wrapper h1 {
   font-style: normal;
@@ -21,6 +21,25 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .courses_module {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .courses_module {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .courses_module {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .courses_cta {
@@ -33,6 +52,10 @@
   border: 1px solid #f5f5ff;
   background: #191919;
 }
+
+.course_content_wrapper img {
+    width: 100%
+  }
 
 .course_content_wrapper h3 {
   font-style: normal;
