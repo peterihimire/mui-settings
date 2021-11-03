@@ -15,7 +15,7 @@ const DashboardCourses = () => {
       <div className='search_filter_wrapper'>
         <SearchFilter
         ExtraComponent={
-          <Link to={`${location.pathname}/add`} className='single-button'><img src={add} /> Add New</Link>
+          <Link to={`${location.pathname}/add`} className='single-button'><img src={add} alt='img' /> Add New</Link>
         } />
       </div>
 
