@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 // import SearchFilter from "../../../components/searchFilter/SearchFilter";
 // import Table from "../../../components/Table/Table";
@@ -6,8 +6,63 @@ import { Link } from "react-router-dom";
 // import add from "../../../assets/images/add.png"
 // import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import ReactQuill from "react-quill";
+import { makeStyles } from "@material-ui/styles";
 
+const useStyles = makeStyles({
+  root: {
+    background: "#212121",
+    color: "rgba(244, 244, 244, 0.8)",
+    border: "none",
+    marginTop: "12px",
+
+    "& .ql-container": {
+      minHeight: "300px",
+    },
+
+    "& .ql-container.ql-snow": {
+      border: "none",
+    },
+
+    "& .ql-toolbar.ql-snow": {
+      border: "0.4px solid rgba(107, 107, 107, 0.8)",
+      boxSizing: "border-box",
+      padding: "8px",
+      color: "rgba(244, 244, 244, 0.8)",
+    },
+  },
+});
 const AddDashboardRolesManagment = () => {
+  const classes = useStyles();
+  const [value, setValue] = useState("");
+  const modules = {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      [
+        { list: "ordered" },
+        { list: "bullet" },
+        { indent: "-1" },
+        { indent: "+1" },
+      ],
+      ["link", "image"],
+      ["clean"],
+    ],
+  };
+
+  const formats = [
+    "header",
+    "bold",
+    "italic",
+    "underline",
+    "strike",
+    "blockquote",
+    "list",
+    "bullet",
+    "indent",
+    "link",
+    "image",
+  ];
   return (
     <div className='subscribers-wrapper'>
       <div className='role__top'>
@@ -36,7 +91,14 @@ const AddDashboardRolesManagment = () => {
             />; */}
           <div className='role__form-group'>
             <label className='role__form-label'>Description</label>
-            <textarea rows='8' className='role__form-input'></textarea>
+            <ReactQuill
+                  theme='snow'
+                  className={classes.root}
+                  value={value}
+                  onChange={setValue}
+                  modules={modules}
+                  formats={formats}
+                />
           </div>
           <div className='role__form-group'>
             <label className='role__form-label'>Access Granted</label>

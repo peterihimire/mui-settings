@@ -28,20 +28,23 @@ const DashboardHome = () => {
 
       <div className='all_info'>
         <div className='single_info_container'>
-          <div className='single-details-wrapper'>
-            <div className='icon_wrapper'>
-              <img src={Icon4} alt='img' />
+          <div className="middleclass">
+            <div className='single-details-wrapper'>
+              <div className='icon_wrapper'>
+                <img src={Icon4} alt='img' />
+              </div>
+              <div className='single-details-info'>
+                <p>Subscribers</p>
+                <h1>2.3k</h1>
+              </div>
             </div>
-            <div className='single-details-info'>
-              <p>Subscribers</p>
-              <h1>2.3k</h1>
-            </div>
+            <p className='increase'>
+              2.5% Increase <span>(Last 24hours)</span>
+            </p>
           </div>
-          <p className='increase'>
-            2.5% Increase <span>(Last 24hours)</span>
-          </p>
         </div>
         <div className='single_info_container special-border'>
+        <div className="middleclass">
           <div className='single-details-wrapper'>
             <div className='icon_wrapper'>
               <img src={Icon4} alt='img' />
@@ -54,8 +57,26 @@ const DashboardHome = () => {
           <p className='increase'>
             0.5% Decrease <span>(Last 24hours)</span>
           </p>
+          </div>
         </div>
         <div className='single_info_container special-border'>
+          <div className="middleclass">
+          <div className='single-details-wrapper'>
+            <div className='icon_wrapper'>
+              <img src={Icon4} alt='img' />
+            </div>
+            <div className='single-details-info'>
+              <p>Total Revenue</p>
+              <h1>$100k</h1>
+            </div>
+          </div>
+          <p className='increase'>
+            2.5% Increase <span>(Last 24hours)</span>
+          </p>
+          </div>
+        </div>
+        <div className='single_info_container special-border'>
+          <div className="middleclass">
           <div className='single-details-wrapper'>
             <div className='icon_wrapper'>
               <img src={Icon4} alt='img' />
@@ -69,19 +90,6 @@ const DashboardHome = () => {
             2.5% Increase <span>(Last 24hours)</span>
           </p>
         </div>
-        <div className='single_info_container special-border'>
-          <div className='single-details-wrapper'>
-            <div className='icon_wrapper'>
-              <img src={Icon4} alt='img' />
-            </div>
-            <div className='single-details-info'>
-              <p>Total Revenue</p>
-              <h1>$100k</h1>
-            </div>
-          </div>
-          <p className='increase'>
-            2.5% Increase <span>(Last 24hours)</span>
-          </p>
         </div>
       </div>
 
