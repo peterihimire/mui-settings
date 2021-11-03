@@ -12,7 +12,7 @@ const AddDashboardCareers = () => {
           </Link>
         </div>
         <div className='add_career_sub_title'>
-          <span className='special_text'>Carrers > </span> <span> Add New</span>
+          <span className='special_text'>Carrers &gt; </span> <span> Add New</span>
         </div>
       </div>
       <div className='add_career_header'>

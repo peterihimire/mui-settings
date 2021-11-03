@@ -13,7 +13,7 @@ const WebinarsDetails = () => {
           </Link>
         </div>
         <div className='webdetails_sub_title'>
-          <span className='special_text'>Webinars > </span>{" "}
+          <span className='special_text'>Webinars &gt; </span>{" "}
           <span> Supercharging your ....</span>
         </div>
       </div>
@@ -22,6 +22,8 @@ const WebinarsDetails = () => {
         <div className='webdetails_cta_btns'>
           <div className='cta__edit'>Edit</div>
           <div className='cta__delete'>Delete</div>
+          {/* <div className='cta__add'><img src={addimg} alt="img" /> <p>Add New</p> </div>
+          <DeleteModal /> */}
         </div>
       </div>
 

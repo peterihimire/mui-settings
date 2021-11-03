@@ -10,7 +10,7 @@
 }
 
 .search-container {
-  width: 550px;
+  width: 400px;
   background: #212121;
   max-width: 100%;
   display: flex;
@@ -46,14 +46,23 @@
   padding: 8px;
   margin-left: 20px;
   width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .single-icon {
-    margin: 0 5px;
-}
-.single-button{
   margin: 0 5px;
-  background: #5D55FF;
+}
+
+.align__icons {
+  margin-top: 5px;
+}
+.single-button {
+  margin: 0 5px;
+  background: #5d55ff;
   border-radius: 3px;
   color: #fff;
   border: none;
@@ -61,6 +70,6 @@
   display: flex;
   align-items: center;
 }
-.single-button img{
+.single-button img {
   margin-right: 7px;
 }

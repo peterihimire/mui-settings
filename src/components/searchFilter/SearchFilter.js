@@ -18,29 +18,29 @@ const SearchFilter = ({placeholder, ExtraComponent}) => {
       <div className='search-other-components'>
         <ul className='search-other-components-container'>
           <li>
-            <span>
+            <span className='align__icons'>
               <IoIosArrowDown />
             </span>
             <span className='single-icon'>Filter By</span>
-            <span>
+            <span className='align__icons'>
               <IoIosArrowDown />
             </span>
           </li>
           <li>
-            <span>
+            <span className='align__icons'>
               <IoIosArrowDown />
             </span>
             <span className='single-icon'>Export</span>
-            <span>
+            <span className='align__icons'>
               <IoIosArrowDown />
             </span>
           </li>
           <li>
-            <span>
+            <span className='align__icons'>
               <IoIosArrowDown />
             </span>
             <span className='single-icon'>Bulk Action</span>
-            <span>
+            <span className='align__icons'>
               <IoIosArrowDown />
             </span>
           </li>
