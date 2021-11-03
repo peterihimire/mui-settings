@@ -2,9 +2,13 @@ import React from "react";
 import { Formik } from "formik";
 import "./Login.css";
 import LOGO from "../../../assets/images/Cloudtician Logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Login = () => {
+  const history = useHistory()
+  const handleLogin = ()=>{
+    return history.push("/dashboard/home")
+  }
   return (
     <>
       <div className='auth-wrapper'>
@@ -32,10 +36,12 @@ const Login = () => {
                 return errors;
               }}
               onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  setSubmitting(false);
-                }, 400);
+                console.log("this is the beginning");
+                return history.push("/dashboard/home")
+                // setTimeout(() => {
+                //   alert(JSON.stringify(values, null, 2));
+                //   setSubmitting(false);
+                // }, 400);
               }}
             >
               {({
@@ -74,7 +80,7 @@ const Login = () => {
                   </div>
 
                   <div className='button-wrapper'>
-                    <button type='submit' disabled={isSubmitting}>
+                    <button type='submit' disabled={isSubmitting} onClick={handleLogin}>
                       Submit
                     </button>
                   </div>

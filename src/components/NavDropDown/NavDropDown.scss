@@ -1,0 +1,24 @@
+.dropdown__wrapper {
+  color: #f5f5ff;
+  background: #191919;
+  border-radius: 10px;
+  padding: 20px;
+  width: 160px;
+  z-index: 999;
+
+  ul > a > li {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    display: flex;
+    gap: 10px;
+    color: rgba(244, 244, 244, 0.8);
+    margin-bottom: 10px;
+  }
+
+  img {
+    width: 15px;
+    height: 15px;
+  }
+}

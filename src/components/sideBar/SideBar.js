@@ -29,8 +29,8 @@ const SideBar = () => {
   const [activeNine, setActiveNine] = useState(false);
 
   useEffect(() => {
-    setActiveOne(true);
-    history.push("/dashboard/home");
+    // setActiveOne(true);
+    // history.push("/dashboard/home");
   }, [history]);
 
   const handleClickOne = () => {

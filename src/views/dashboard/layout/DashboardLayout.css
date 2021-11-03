@@ -12,3 +12,13 @@
     width: 81%;
     /* background: darkred; */
 }
+
+@media (max-width: 992px) {
+    .left {
+      display: none;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+  

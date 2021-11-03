@@ -1,0 +1,128 @@
+.top-nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px 20px;
+  border-bottom: 0.4px solid rgba(107, 107, 107, 0.8);
+}
+
+.search-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #181818;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.search-wrapper input {
+  border: none;
+  outline: none;
+  background: #181818;
+  margin-left: 3px;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.other-nav-content {
+  display: flex;
+}
+
+.other-nav-content img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.topnav-profile h5 {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #f5f5ff;
+}
+
+.topnav-profile p {
+  font-size: 10px;
+  line-height: 16px;
+  color: #ff8662;
+}
+
+.dropdown__icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  color: #f5f5ff;
+  cursor: pointer;
+  margin-top: 10px;
+  position: relative;
+
+  .view__dropdown {
+    position: absolute;
+    top: 30px;
+    right: -10px;
+  }
+}
+
+.add__new__user__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.top-nav_icon,
+.small_nav_logo {
+  display: none;
+}
+
+// media query for 1024px
+@media screen and (max-width: 1024px) {
+
+  .top-nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px 20px;
+    border-bottom: 0.4px solid rgba(107, 107, 107, 0.8);
+  }
+
+  .top-nav_icon {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  .top-nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px 20px;
+    border-bottom: 0.4px solid rgba(107, 107, 107, 0.8);
+  }
+
+  .top-nav_icon,
+  .small_nav_logo {
+    display: block;
+  }
+
+  .small_nav_logo img{
+    width: 60%;
+  }
+
+  .top-nav_icon {
+    font-size: 2rem;
+  }
+
+  .search-wrapper,
+  .add__new__user__wrapper,
+  .topnav-profile,
+  .dropdown__icon,
+  .add__new__user__img {
+    display: none
+  }
+}
