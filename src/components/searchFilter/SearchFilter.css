@@ -19,6 +19,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
+  color: #fff;
 }
 
 .search-container input {
@@ -27,6 +28,7 @@
   outline: none;
   background: #212121;
   padding: 5px;
+  color: #fff;
 }
 
 .search-other-components .search-other-components-container {
@@ -51,14 +53,17 @@
   justify-content: center;
   cursor: pointer;
   white-space: nowrap;
+  color: #fff;
 }
 
 .single-icon {
   margin: 0 5px;
+  color: #fff;
 }
 
 .align__icons {
   margin-top: 5px;
+  color: #fff;
 }
 .single-button {
   margin: 0 5px;
