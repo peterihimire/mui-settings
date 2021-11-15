@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Switch } from "@material-ui/core";
+// import { Switch } from "@material-ui/core";
 import SearchFilter from "../../../../components/searchFilter/SearchFilter";
 import Table from "../../../../components/Table/Table";
 import "./coursedetailsTabs.scss";

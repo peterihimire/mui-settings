@@ -472,14 +472,14 @@
 
   .ranks ul li {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     margin: 0;
   }
 
   .table_container-home {
     display: flex;
     flex-direction: column !important;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     background: #181818 !important;
   }
