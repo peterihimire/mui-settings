@@ -81,7 +81,7 @@ const AddInsight = () => {
       </div>
 
       <div className='add_career_message_wrapper'>
-        <form className='role__form'>
+        <form className='role__form' style={{alignItems:"start"}}>
           <div className='add_career_message_form'>
             <div className='add_career_role__form-details'>
               <div className='add_career_role__form-group'>
@@ -89,7 +89,7 @@ const AddInsight = () => {
                 <input type='text' className='add_career_role__form-input' />
               </div>
               <div className='add_career_role__form-group'>
-                <label className='add_career_role__form-label'>Comments</label>
+                <label className='add_career_role__form-label'>Comments <span className="required">*</span></label>
                 <ReactQuill
                   theme='snow'
                   className={classes.root}
@@ -106,12 +106,12 @@ const AddInsight = () => {
 
               <div className='add_career_role__form-group'>
                 <label className='add_career_role__form-label'>
-                  Image Settings
+                  Image Settings  <span className="required">*</span>
                 </label>
                 <input type='text' className='add_career_role__form-input' />
               </div>
               <div className='add_career_role__form-group'>
-                <label className='add_career_role__form-label'>Alt</label>
+                <label className='add_career_role__form-label'>Alt Text <span className="required">*</span></label>
                 <input type='text' className='add_career_role__form-input' />
               </div>
             </div>

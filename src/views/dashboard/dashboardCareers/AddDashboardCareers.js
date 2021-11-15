@@ -20,7 +20,7 @@ const AddDashboardCareers = () => {
       </div>
 
       <div className='add_career_message_wrapper'>
-        <form className='role__form'>
+        <form className='role__form' style={{alignItems:"start"}}>
           <div className='add_career_message_form'>
             <div className='add_career_role__form-details'>
               <div className='add_career_role__form-group'>

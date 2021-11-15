@@ -10,7 +10,7 @@ import NavDropDown from "../NavDropDown/NavDropDown";
 import AddModal from "../Modal/AddModal/AddModal";
 import LOGO from "../../assets/images/dashboard-logo.svg";
 
-const TopNav = () => {
+const TopNav = ({handleMobileNav}) => {
   const [{ theme }, toggleTheme] = useContext(ThemeContext);
   const [dropdown, setDropdown] = useState(false);
 
@@ -56,7 +56,7 @@ const TopNav = () => {
             )}
           </div>
         </div>
-        <div className='top-nav_icon'>
+        <div className='top-nav_icon' onClick={handleMobileNav}>
           <RiBarChartHorizontalFill />
         </div>
       </div>

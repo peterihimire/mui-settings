@@ -18,6 +18,7 @@ import DashboardCareersSingle from "./dashboardCareers/DashboardCareersSingle";
 import AddDashboardCareers from "./dashboardCareers/AddDashboardCareers";
 import AddInsight from "./dashboardInsight/AddInsight/AddInsight";
 import DashboardProfile from "./dashboardProfile/DashboardProfile";
+import DashboardSingleRoleManagement from "./dashboardRolesManagment/DashboardSingleRoleManagement";
 
 function Dashboard(props) {
   const {
@@ -65,6 +66,9 @@ function Dashboard(props) {
         </Route>
         <Route path={`${path}/roles-management/add`}>
           <AddDashboardRolesManagment />
+        </Route>
+        <Route path={`${path}/roles-management/:id`}>
+          <DashboardSingleRoleManagement />
         </Route>
         <Route path={`${path}/roles-management`}>
           <DashboardRolesManagment />

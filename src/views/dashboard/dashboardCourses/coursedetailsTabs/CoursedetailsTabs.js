@@ -1,7 +1,81 @@
 import React, { useState } from "react";
+import { Switch } from "@material-ui/core";
 import SearchFilter from "../../../../components/searchFilter/SearchFilter";
 import Table from "../../../../components/Table/Table";
 import "./coursedetailsTabs.scss";
+import Img from "../../../../assets/images/profile-img.png"
+import Dot from "../../../../assets/images/three-dot.png";
+
+const customColumn = [
+  {
+    field: "name",
+    headerName: "Full Name",
+    width: 200,
+    renderCell: (params) => <div className="img-col"> <img src={Img} alt="" /> {params.value}</div>,
+    editable: true,
+  },
+  {
+    field: "email",
+    headerName: "Email Address",
+    width: 150,
+    editable: true,
+    headerClassName: "super-app-theme--header",
+  },
+  {
+    field: "added",
+    headerName: "User Added on",
+    width: 150,
+    editable: true,
+    headerClassName: "super-app-theme--header",
+  },
+  {
+    field: "active",
+    headerName: "Active",
+    width: 150,
+    headerClassName: "super-app-theme--header",
+    renderCell: (params)=><Switch color="primary" name="checked" />
+  },
+  {
+    field: "modified",
+    headerName: "Last Modified",
+    width: 200,
+    headerClassName: "super-app-theme--header",
+  },
+  {
+    field: "",
+    renderCell: (params) => (
+      <div className='img-col'>
+        {" "}
+        <img src={Dot} alt='' />
+      </div>
+    ),
+  },
+]
+
+const customData = [
+  {
+    id:"1",
+    name:"Lucky Onoriode",
+    email:"luckyeonoriode@gmail.com",
+    added: "Dec 25, 2021",
+    modified:"Sep 12, 2020 11:06AM"
+  },
+  {
+    id:"2",
+    name:"Daniel Kadiri",
+    email:"danielkadiri@gmail.com",
+    added: "Dec 25, 2021",
+    modified:"Sep 12, 2020 11:06AM"
+  },
+  {
+    id:"3",
+    name:"Lucky Onoriode",
+    email:"luckyeonoriode@gmail.com",
+    added: "Dec 25, 2021",
+    modified:"Sep 12, 2020 11:06AM"
+  }
+]
+
 
 const CoursedetailsTabs = () => {
   const [tabOne, setTabOne] = useState(true);
@@ -35,7 +109,7 @@ const CoursedetailsTabs = () => {
             style={{ cursor: "pointer" }}
             onClick={handleTabOne}
           >
-            Services <span className='tab-count1'>300</span>
+            Services <span className='tab-count1'>13</span>
           </li>
           <li
             className={tabTwo ? "activeTab" : ""}
@@ -56,19 +130,27 @@ const CoursedetailsTabs = () => {
           {tabOne && (
             <>
               <SearchFilter />
-              <Table />
+              <Table 
+              customColumn={customColumn}
+                customData={customData}/>
             </>
           )}
           {tabTwo && (
             <>
               <SearchFilter />
-              <Table />
+              <Table 
+                customColumn={customColumn}
+                customData={customData}
+              />
             </>
           )}
           {tabThree && (
             <>
               <SearchFilter />
-              <Table />
+              <Table 
+                customColumn={customColumn}
+                customData={customData}
+              />
             </>
           )}
         </div>
