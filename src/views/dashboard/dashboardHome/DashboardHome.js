@@ -7,6 +7,8 @@ import Icon1 from "../../../assets/images/hand (3).png";
 import Icon2 from "../../../assets/images/hand (2).png";
 import Icon3 from "../../../assets/images/hand (1).png";
 import Icon4 from "../../../assets/images/icon1.png";
+import Icon5 from "../../../assets/images/icon2.png";
+import Icon6 from "../../../assets/images/icon3.png";
 
 const DashboardHome = () => {
   const [tabOne, setTabOne] = useState(true);
@@ -47,14 +49,14 @@ const DashboardHome = () => {
         <div className="middleclass">
           <div className='single-details-wrapper'>
             <div className='icon_wrapper'>
-              <img src={Icon4} alt='img' />
+              <img src={Icon5} alt='img' />
             </div>
             <div className='single-details-info'>
               <p>Visitors</p>
               <h1>60k</h1>
             </div>
           </div>
-          <p className='increase'>
+          <p className='decrease' >
             0.5% Decrease <span>(Last 24hours)</span>
           </p>
           </div>
@@ -63,7 +65,7 @@ const DashboardHome = () => {
           <div className="middleclass">
           <div className='single-details-wrapper'>
             <div className='icon_wrapper'>
-              <img src={Icon4} alt='img' />
+              <img src={Icon6} alt='img' />
             </div>
             <div className='single-details-info'>
               <p>Total Revenue</p>
@@ -79,7 +81,7 @@ const DashboardHome = () => {
           <div className="middleclass">
           <div className='single-details-wrapper'>
             <div className='icon_wrapper'>
-              <img src={Icon4} alt='img' />
+              <img src={Icon6} alt='img' />
             </div>
             <div className='single-details-info'>
               <p>Total Revenue</p>
@@ -127,43 +129,47 @@ const DashboardHome = () => {
         </div>
       </div>
 
-      <div className='table_container-home'>
-        <div className='tab-container-header'>
-          <ul className='tab-container-title'>
-            <li>Recent Subscribers</li>
-          </ul>
+      <div className="table-section">
+        <div className='table_container-home'>
+          <div className='tab-container-header'>
+            <ul className='tab-container-title'>
+              <li>Recent Subscribers</li>
+            </ul>
+          </div>
+          <div className='tab-wrapper'>
+            <ul className='tab-container'>
+              <li
+                className={tabOne ? "activeTab" : ""}
+                style={{ cursor: "pointer" }}
+                onClick={handleTabOne}
+                >
+                Individual <span className='tab-count1'>300</span>
+              </li>
+              <li
+                className={tabTwo ? "activeTab" : ""}
+                style={{ cursor: "pointer" }}
+                onClick={handleTabTwo}
+                >
+                Business <span className='tab-count2'>200</span>
+              </li>
+            </ul>
+          </div>
+          <select className="tab-dropdown">
+            <option>This Month</option>
+          </select>
         </div>
-        <div className='tab-wrapper'>
-          <ul className='tab-container'>
-            <li
-              className={tabOne ? "activeTab" : ""}
-              style={{ cursor: "pointer" }}
-              onClick={handleTabOne}
-            >
-              Individual <span className='tab-count1'>300</span>
-            </li>
-            <li
-              className={tabTwo ? "activeTab" : ""}
-              style={{ cursor: "pointer" }}
-              onClick={handleTabTwo}
-            >
-              Business <span className='tab-count2'>200</span>
-            </li>
-          </ul>
+        <div className='tab-contents'>
+          {tabOne && (
+            <>
+              <HomeTable />
+            </>
+          )}
+          {tabTwo && (
+            <>
+              <HomeTable />
+            </>
+          )}
         </div>
-      </div>
-
-      <div className='tab-contents'>
-        {tabOne && (
-          <>
-            <HomeTable />
-          </>
-        )}
-        {tabTwo && (
-          <>
-            <HomeTable />
-          </>
-        )}
       </div>
     </div>
   );

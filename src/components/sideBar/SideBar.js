@@ -138,7 +138,7 @@ const SideBar = () => {
       <div className='dashboard-logo'>
         <img src={LOGO} alt='logo' />
         <p>
-          September 10, 2021 <span> . </span> 01:57 AM
+          September 10, 2021 <span className="smallcircle"></span> 01:57 AM
         </p>
       </div>
       <div className='nav-links'>
