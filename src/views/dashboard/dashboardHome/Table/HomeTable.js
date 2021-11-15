@@ -114,7 +114,7 @@ const HomeTable = () => {
   const useStyles = makeStyles({
     root: {
       "& .MuiDataGrid-toolbarContainer": {
-        borderBottom: "16px solid #E5E5E5",
+        borderBottom: "16px solid #F4F4F4",
         padding: "10px",
         display: "block",
         // backgroundColor: theme.background,
