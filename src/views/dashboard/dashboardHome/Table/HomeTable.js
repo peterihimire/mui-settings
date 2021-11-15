@@ -55,16 +55,7 @@ const columns = [
     width: 160,
     headerClassName: "super-app-theme--header",
   },
-  // {
-  //   field: "lastActive",
-  //   headerName: "Last Active",
-  //   width: 150,
-  //   headerClassName: "super-app-theme--header",
-  // },
-  // {
-  //   field: '',
-  //   renderCell: (params) => <div className="img-col"> <img src={Dot} alt="" /></div>,
-  // }
+
 ];
 
 const data = [
@@ -123,7 +114,7 @@ const HomeTable = () => {
   const useStyles = makeStyles({
     root: {
       "& .MuiDataGrid-toolbarContainer": {
-        borderBottom: "16px solid #E5E5E5",
+        borderBottom: "16px solid #F4F4F4",
         padding: "10px",
         display: "block",
         // backgroundColor: theme.background,

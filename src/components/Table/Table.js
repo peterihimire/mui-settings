@@ -231,7 +231,7 @@ const Table = ({customData, customColumn}) => {
   const useStyles = makeStyles({
     root: {
       "& .MuiDataGrid-toolbarContainer": {
-        borderBottom: "16px solid #E5E5E5",
+        borderBottom: "16px solid #F4F4F4",
         padding: "10px",
         display: "block",
         // backgroundColor: theme.background,
@@ -240,7 +240,7 @@ const Table = ({customData, customColumn}) => {
       },
       "& .MuiDataGrid-row": {
         // backgroundColor: theme.background,
-        backgroundColor: "#181818",
+        backgroundColor: "#212121",
         color: theme.color,
       },
       "& .MuiButton-textPrimary": {
@@ -248,17 +248,17 @@ const Table = ({customData, customColumn}) => {
       },
       "& .super-app-theme--header": {
         // backgroundColor: theme.background,
-        backgroundColor: "#181818",
+        backgroundColor: "#212121",
         color: theme.color,
       },
       "& .MuiDataGrid-columnHeaderWrapper": {
         // backgroundColor: theme.background,
-        backgroundColor: "#181818",
+        backgroundColor: "#212121",
         color: theme.color,
       },
       "& .MuiDataGrid-root": {
         // backgroundColor: theme.background,
-        backgroundColor: "#181818",
+        backgroundColor: "#212121",
         color: theme.color,
         border: "none",
       },
@@ -283,6 +283,9 @@ const Table = ({customData, customColumn}) => {
       },
       "& .makeStyles-root-4": {
         backgroundColor: "#181818",
+      },
+      "& .MuiSvgIcon-root":{
+        fill:"#fff"
       },
     },
   });

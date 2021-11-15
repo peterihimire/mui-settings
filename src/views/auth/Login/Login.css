@@ -5,7 +5,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
+.smallcircle{
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: tomato;
+  display: inline-block;
+  transform: translateY(-3px);
+  margin: 0px 3px;
+}
+.welcome-message-box{
+  background-color: #191919;
+  display: grid;
+}
 .welcome-message {
   margin: auto 7rem;
   text-align: center;

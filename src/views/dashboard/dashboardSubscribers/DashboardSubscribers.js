@@ -27,14 +27,14 @@ const DashboardSubscribers = () => {
             style={{ cursor: "pointer" }}
             onClick={handleTabOne}
           >
-            Individual <span className='tab-count1'>300</span>
+            Individual <span className={tabOne ? "tab-count1" : "tab-count2"}>300</span>
           </li>
           <li
             className={tabTwo ? "activeTab" : ""}
             style={{ cursor: "pointer" }}
             onClick={handleTabTwo}
           >
-            Business <span className='tab-count2'>200</span>
+            Business <span className={tabTwo ? "tab-count1" : "tab-count2"}>200</span>
           </li>
         </ul>
         <div className='tab-contents'>
@@ -47,8 +47,7 @@ const DashboardSubscribers = () => {
           {tabTwo && (
             <>
               <SearchFilter />
-              <h3>Tab two</h3>
-              {/* <Table /> */}
+              <Table />
             </>
           )}
         </div>

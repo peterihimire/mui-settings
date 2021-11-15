@@ -12,13 +12,15 @@ const Login = () => {
   return (
     <>
       <div className='auth-wrapper'>
-        <div className='welcome-message'>
-          <img src={LOGO} alt='Cloudtician Logo' />
-          <h2 className='welcome-title'>Welcome Back Admin!</h2>
-          <p className='welcome-text'>
-            Sign in to your cloudticians dashboard to access your content and
-            drive the technological revolution to help people learn
-          </p>
+        <div className='welcome-message-box'>
+          <div className='welcome-message'>
+            <img src={LOGO} alt='Cloudtician Logo' />
+            <h2 className='welcome-title'>Welcome Back Admin!</h2>
+            <p className='welcome-text'>
+              Sign in to your cloudticians dashboard to access your content and
+              drive the technological revolution to help people learn
+            </p>
+          </div>
         </div>
         <div className='form-wrapper'>
           <div>
