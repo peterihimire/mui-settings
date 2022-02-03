@@ -3,12 +3,14 @@ import React, { useState } from "react";
 import SearchFilter from "../../../../components/searchFilter/SearchFilter";
 import Table from "../../../../components/Table/Table";
 import "./coursedetailsTabs.scss";
-import Img from "../../../../assets/images/profile-img.png"
+import Img from "../../../../assets/images/profile-img.png";
 import Dot from "../../../../assets/images/three-dot.png";
-import { styled } from '@mui/system';
-import SwitchUnstyled, { switchUnstyledClasses } from '@mui/core/SwitchUnstyled';
+import { styled } from "@mui/system";
+import SwitchUnstyled, {
+  switchUnstyledClasses,
+} from "@mui/base/SwitchUnstyled";
 
- const Root = styled('span')`
+const Root = styled("span")`
   font-size: 0;
   position: relative;
   display: inline-block;
@@ -38,7 +40,7 @@ import SwitchUnstyled, { switchUnstyledClasses } from '@mui/core/SwitchUnstyled'
     top: 3px;
     left: 4px;
     border-radius: 16px;
-    background-color: #9A95F3;
+    background-color: #9a95f3;
     position: relative;
     transition: all 200ms ease;
   }
@@ -52,7 +54,7 @@ import SwitchUnstyled, { switchUnstyledClasses } from '@mui/core/SwitchUnstyled'
     .${switchUnstyledClasses.thumb} {
       left: 19px;
       top: 4px;
-      background-color: #5D55FF;
+      background-color: #5d55ff;
     }
 
     .${switchUnstyledClasses.track} {
@@ -78,7 +80,12 @@ const customColumn = [
     field: "name",
     headerName: "Full Name",
     width: 200,
-    renderCell: (params) => <div className="img-col"> <img src={Img} alt="" /> {params.value}</div>,
+    renderCell: (params) => (
+      <div className="img-col">
+        {" "}
+        <img src={Img} alt="" /> {params.value}
+      </div>
+    ),
     editable: true,
   },
   {
@@ -100,7 +107,7 @@ const customColumn = [
     headerName: "Active",
     width: 150,
     headerClassName: "super-app-theme--header",
-    renderCell: (params)=><SwitchUnstyled component={Root} />
+    renderCell: (params) => <SwitchUnstyled component={Root} />,
   },
   {
     field: "modified",
@@ -111,38 +118,37 @@ const customColumn = [
   {
     field: "",
     renderCell: (params) => (
-      <div className='img-col'>
+      <div className="img-col">
         {" "}
-        <img src={Dot} alt='' />
+        <img src={Dot} alt="" />
       </div>
     ),
   },
-]
+];
 
 const customData = [
   {
-    id:"1",
-    name:"Lucky Onoriode",
-    email:"luckyeonoriode@gmail.com",
+    id: "1",
+    name: "Lucky Onoriode",
+    email: "luckyeonoriode@gmail.com",
     added: "Dec 25, 2021",
-    modified:"Sep 12, 2020 11:06AM"
+    modified: "Sep 12, 2020 11:06AM",
   },
   {
-    id:"2",
-    name:"Daniel Kadiri",
-    email:"danielkadiri@gmail.com",
+    id: "2",
+    name: "Daniel Kadiri",
+    email: "danielkadiri@gmail.com",
     added: "Dec 25, 2021",
-    modified:"Sep 12, 2020 11:06AM"
+    modified: "Sep 12, 2020 11:06AM",
   },
   {
-    id:"3",
-    name:"Lucky Onoriode",
-    email:"luckyeonoriode@gmail.com",
+    id: "3",
+    name: "Lucky Onoriode",
+    email: "luckyeonoriode@gmail.com",
     added: "Dec 25, 2021",
-    modified:"Sep 12, 2020 11:06AM"
-  }
-]
-
+    modified: "Sep 12, 2020 11:06AM",
+  },
+];
 
 const CoursedetailsTabs = () => {
   const [tabOne, setTabOne] = useState(true);
@@ -169,55 +175,47 @@ const CoursedetailsTabs = () => {
 
   return (
     <div>
-      <div className='tab-wrapper'>
-        <ul className='tab-container'>
+      <div className="tab-wrapper">
+        <ul className="tab-container">
           <li
             className={tabOne ? "activeTab" : ""}
             style={{ cursor: "pointer" }}
             onClick={handleTabOne}
           >
-            Services <span className='tab-count1'>13</span>
+            Services <span className="tab-count1">13</span>
           </li>
           <li
             className={tabTwo ? "activeTab" : ""}
             style={{ cursor: "pointer" }}
             onClick={handleTabTwo}
           >
-            Learning Paths<span className='tab-count2'>200</span>
+            Learning Paths<span className="tab-count2">200</span>
           </li>
           <li
             className={tabThree ? "activeTab" : ""}
             style={{ cursor: "pointer" }}
             onClick={handleTabThree}
           >
-            Certification <span className='tab-count2'>200</span>
+            Certification <span className="tab-count2">200</span>
           </li>
         </ul>
-        <div className='tab-contents'>
+        <div className="tab-contents">
           {tabOne && (
             <>
               <SearchFilter />
-              <Table 
-              customColumn={customColumn}
-                customData={customData}/>
+              <Table customColumn={customColumn} customData={customData} />
             </>
           )}
           {tabTwo && (
             <>
               <SearchFilter />
-              <Table 
-                customColumn={customColumn}
-                customData={customData}
-              />
+              <Table customColumn={customColumn} customData={customData} />
             </>
           )}
           {tabThree && (
             <>
               <SearchFilter />
-              <Table 
-                customColumn={customColumn}
-                customData={customData}
-              />
+              <Table customColumn={customColumn} customData={customData} />
             </>
           )}
         </div>

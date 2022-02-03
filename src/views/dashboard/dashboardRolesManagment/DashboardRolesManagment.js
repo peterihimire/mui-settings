@@ -4,10 +4,12 @@ import SearchFilter from "../../../components/searchFilter/SearchFilter";
 import Table from "../../../components/Table/Table";
 import Dot from "../../../assets/images/three-dot.png";
 import add from "../../../assets/images/add.png";
-import { styled } from '@mui/system';
-import SwitchUnstyled, { switchUnstyledClasses } from '@mui/core/SwitchUnstyled';
+import { styled } from "@mui/system";
+import SwitchUnstyled, {
+  switchUnstyledClasses,
+} from "@mui/base/SwitchUnstyled";
 
- const Root = styled('span')`
+const Root = styled("span")`
   font-size: 0;
   position: relative;
   display: inline-block;
@@ -37,7 +39,7 @@ import SwitchUnstyled, { switchUnstyledClasses } from '@mui/core/SwitchUnstyled'
     top: 3px;
     left: 4px;
     border-radius: 16px;
-    background-color: #9A95F3;
+    background-color: #9a95f3;
     position: relative;
     transition: all 200ms ease;
   }
@@ -51,7 +53,7 @@ import SwitchUnstyled, { switchUnstyledClasses } from '@mui/core/SwitchUnstyled'
     .${switchUnstyledClasses.thumb} {
       left: 19px;
       top: 4px;
-      background-color: #5D55FF;
+      background-color: #5d55ff;
     }
 
     .${switchUnstyledClasses.track} {
@@ -76,15 +78,15 @@ const DashboardRolesManagment = () => {
   const location = useLocation();
 
   return (
-    <div className='subscribers-wrapper'>
+    <div className="subscribers-wrapper">
       <h1>Roles Management</h1>
-      <div className='tab-wrapper'>
-        <div className='tab-contents'>
+      <div className="tab-wrapper">
+        <div className="tab-contents">
           <SearchFilter
-            placeholder='Search Roles'
+            placeholder="Search Roles"
             ExtraComponent={
-              <Link to={`${location.pathname}/add`} className='single-button'>
-                <img src={add} alt='img'/> Add New
+              <Link to={`${location.pathname}/add`} className="single-button">
+                <img src={add} alt="img" /> Add New
               </Link>
             }
           />
@@ -115,7 +117,7 @@ const DashboardRolesManagment = () => {
                 headerName: "Active",
                 width: 120,
                 type: "date",
-                renderCell: (params)=><SwitchUnstyled component={Root} />,
+                renderCell: (params) => <SwitchUnstyled component={Root} />,
                 headerClassName: "super-app-theme--header",
               },
               {
@@ -127,9 +129,9 @@ const DashboardRolesManagment = () => {
               {
                 field: "",
                 renderCell: (params) => (
-                  <div className='img-col'>
+                  <div className="img-col">
                     {" "}
-                    <img src={Dot} alt='' />
+                    <img src={Dot} alt="" />
                   </div>
                 ),
               },

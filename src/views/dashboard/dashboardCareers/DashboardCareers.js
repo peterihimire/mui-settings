@@ -4,10 +4,12 @@ import SearchFilter from "../../../components/searchFilter/SearchFilter";
 import Table from "../../../components/Table/Table";
 import Dot from "../../../assets/images/three-dot.png";
 import add from "../../../assets/images/add.png";
-import { styled } from '@mui/system';
-import SwitchUnstyled, { switchUnstyledClasses } from '@mui/core/SwitchUnstyled';
+import { styled } from "@mui/system";
+import SwitchUnstyled, {
+  switchUnstyledClasses,
+} from "@mui/base/SwitchUnstyled";
 
- const Root = styled('span')`
+const Root = styled("span")`
   font-size: 0;
   position: relative;
   display: inline-block;
@@ -37,7 +39,7 @@ import SwitchUnstyled, { switchUnstyledClasses } from '@mui/core/SwitchUnstyled'
     top: 3px;
     left: 4px;
     border-radius: 16px;
-    background-color: #9A95F3;
+    background-color: #9a95f3;
     position: relative;
     transition: all 200ms ease;
   }
@@ -51,7 +53,7 @@ import SwitchUnstyled, { switchUnstyledClasses } from '@mui/core/SwitchUnstyled'
     .${switchUnstyledClasses.thumb} {
       left: 19px;
       top: 4px;
-      background-color: #5D55FF;
+      background-color: #5d55ff;
     }
 
     .${switchUnstyledClasses.track} {
@@ -105,7 +107,7 @@ const customColumn = [
     headerName: "Active",
     width: 100,
     headerClassName: "super-app-theme--header",
-    renderCell: (params)=><SwitchUnstyled component={Root} />
+    renderCell: (params) => <SwitchUnstyled component={Root} />,
   },
   {
     field: "postedon",
@@ -116,51 +118,48 @@ const customColumn = [
   {
     field: "",
     renderCell: (params) => (
-      <div className='img-col'>
+      <div className="img-col">
         {" "}
-        <img src={Dot} alt='' />
+        <img src={Dot} alt="" />
       </div>
     ),
   },
-]
+];
 
 const customData = [
   {
-    id:1,
-    jobtitle:"Sr. Product Designer",
-    candidates:"240 candidates",
-    location:"Washington DC",
-    jobtype:"Contract",
-    active:"active",
-    postedon:"Feb 14, 2021 12:06PM"
+    id: 1,
+    jobtitle: "Sr. Product Designer",
+    candidates: "240 candidates",
+    location: "Washington DC",
+    jobtype: "Contract",
+    active: "active",
+    postedon: "Feb 14, 2021 12:06PM",
   },
   {
-    id:2,
-    jobtitle:"Business Analyst",
-    candidates:"10 candidates",
-    location:"Washington DC",
-    jobtype:"Contract",
-    active:"active",
-    postedon:"Feb 14, 2021 12:06PM"
+    id: 2,
+    jobtitle: "Business Analyst",
+    candidates: "10 candidates",
+    location: "Washington DC",
+    jobtype: "Contract",
+    active: "active",
+    postedon: "Feb 14, 2021 12:06PM",
   },
   {
-    id:3,
-    jobtitle:"HR Manager",
-    candidates:"42 candidates",
-    location:"remote",
-    jobtype:"Internship",
-    active:"active",
-    postedon:"Feb 14, 2021 12:06PM"
-  }
-]
-
-
-
+    id: 3,
+    jobtitle: "HR Manager",
+    candidates: "42 candidates",
+    location: "remote",
+    jobtype: "Internship",
+    active: "active",
+    postedon: "Feb 14, 2021 12:06PM",
+  },
+];
 
 const DashboardCareers = () => {
   const location = useLocation();
   // const history = useHistory()
-  console.log("Careers",location);
+  console.log("Careers", location);
   const [tabOne, setTabOne] = useState(true);
   const [tabTwo, setTabTwo] = useState(false);
 
@@ -175,64 +174,58 @@ const DashboardCareers = () => {
   };
 
   return (
-    <div className='subscribers-wrapper'>
+    <div className="subscribers-wrapper">
       <h1>Careers</h1>
-      
+
       {/* <Switch color="primary" name="checked"     /> */}
-      <div className='tab-wrapper'>
-        <ul className='tab-container'>
+      <div className="tab-wrapper">
+        <ul className="tab-container">
           <li
             className={tabOne ? "activeTab" : ""}
             style={{ cursor: "pointer" }}
             onClick={handleTabOne}
           >
-            Job Posted <span className='tab-count1'>13</span>
+            Job Posted <span className="tab-count1">13</span>
           </li>
           <li
             className={tabTwo ? "activeTab" : ""}
             style={{ cursor: "pointer" }}
             onClick={handleTabTwo}
           >
-          Submitted Applications <span className='tab-count2'>450</span>
+            Submitted Applications <span className="tab-count2">450</span>
           </li>
         </ul>
-        <div className='tab-contents'>
+        <div className="tab-contents">
           {tabOne && (
             <>
               <SearchFilter
-                placeholder='Search Roles'
+                placeholder="Search Roles"
                 ExtraComponent={
                   <Link
                     to={`${location.pathname}/add`}
-                    className='single-button'
+                    className="single-button"
                   >
-                    <img src={add} alt='img'/> Add New
+                    <img src={add} alt="img" /> Add New
                   </Link>
                 }
               />
-              <Table
-                customColumn={customColumn}
-                customData={customData}
-              />
+              <Table customColumn={customColumn} customData={customData} />
             </>
           )}
           {tabTwo && (
             <>
               <SearchFilter
-                placeholder='Search Roles'
+                placeholder="Search Roles"
                 ExtraComponent={
                   <Link
                     to={`${location.pathname}/add`}
-                    className='single-button'
+                    className="single-button"
                   >
-                    <img src={add} alt='img' /> Add New
+                    <img src={add} alt="img" /> Add New
                   </Link>
                 }
               />
-               <Table
-                customColumn={customColumn}
-                customData={customData}
-              />
+              <Table customColumn={customColumn} customData={customData} />
             </>
           )}
         </div>

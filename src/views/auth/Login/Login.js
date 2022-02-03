@@ -1,31 +1,48 @@
 import React from "react";
-import { Formik } from "formik";
+import { Form, Formik } from "formik";
 import "./Login.css";
 import LOGO from "../../../assets/images/Cloudtician Logo.svg";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useLogin } from "./../../../query-client/mutations/index";
+import { ToastContainer } from "react-toastify";
 
 const Login = () => {
-  const history = useHistory()
-  const handleLogin = ()=>{
-    return history.push("/dashboard/home")
-  }
+  const { mutate, isLoading } = useLogin("/admin/auth/login");
+
+  const handleLogin = async (values) => {
+    mutate(values);
+  };
+
   return (
     <>
-      <div className='auth-wrapper'>
-        <div className='welcome-message-box'>
-          <div className='welcome-message'>
-            <img src={LOGO} alt='Cloudtician Logo' />
-            <h2 className='welcome-title'>Welcome Back Admin!</h2>
-            <p className='welcome-text'>
+      <ToastContainer
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      <div className="auth-wrapper">
+        <div className="welcome-message-box">
+          <div className="welcome-message">
+            <img src={LOGO} alt="Cloudtician Logo" />
+            <h2 className="welcome-title">Welcome Back Admin!</h2>
+            <p className="welcome-text">
               Sign in to your cloudticians dashboard to access your content and
               drive the technological revolution to help people learn
             </p>
           </div>
         </div>
-        <div className='form-wrapper'>
+        <div className="form-wrapper">
           <div>
             <Formik
-              initialValues={{ email: "", password: "" }}
+              initialValues={{
+                email: "ayodimejifasina@gmail.com",
+                password: "password",
+              }}
               validate={(values) => {
                 const errors = {};
                 if (!values.email) {
@@ -37,13 +54,8 @@ const Login = () => {
                 }
                 return errors;
               }}
-              onSubmit={(values, { setSubmitting }) => {
-                console.log("this is the beginning");
-                return history.push("/dashboard/home")
-                // setTimeout(() => {
-                //   alert(JSON.stringify(values, null, 2));
-                //   setSubmitting(false);
-                // }, 400);
+              onSubmit={async (values, { setSubmitting }) => {
+                handleLogin(values);
               }}
             >
               {({
@@ -52,44 +64,46 @@ const Login = () => {
                 touched,
                 handleChange,
                 handleBlur,
-                handleSubmit,
-                isSubmitting,
                 /* and other goodies */
               }) => (
-                <form onSubmit={handleSubmit}>
-                  <div className='input-wrapper'>
-                    <label className='auth-label'>Email</label>
+                <Form>
+                  <div className="input-wrapper">
+                    <label className="auth-label">Email</label>
                     <input
-                      type='email'
-                      name='email'
+                      type="email"
+                      name="email"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.email}
                     />
-                    {/* <div className='auth-label'>{errors.email && touched.email && errors.email}</div> */}
+                    <div className="auth-label">
+                      {errors.email && touched.email && errors.email}
+                    </div>
                   </div>
 
-                  <div className='input-wrapper'>
-                    <label className='auth-label'>Password</label>
+                  <div className="input-wrapper">
+                    <label className="auth-label">Password</label>
                     <input
-                      type='password'
-                      name='password'
+                      type="password"
+                      name="password"
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values.password}
                     />
-                    {/* <div className='auth-label'>{errors.password && touched.password && errors.password}</div> */}
+                    <div className="auth-label">
+                      {errors.password && touched.password && errors.password}
+                    </div>
                   </div>
 
-                  <div className='button-wrapper'>
-                    <button type='submit' disabled={isSubmitting} onClick={handleLogin}>
-                      Submit
+                  <div className="button-wrapper">
+                    <button type="submit" disabled={isLoading}>
+                      {isLoading ? "Logging In..." : "Submit"}
                     </button>
                   </div>
-                  <div className='forget-password-link'>
-                    <Link to='/forget-password'>forget password ?</Link>
+                  <div className="forget-password-link">
+                    <Link to="/forget-password">forget password ?</Link>
                   </div>
-                </form>
+                </Form>
               )}
             </Formik>
           </div>

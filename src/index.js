@@ -4,12 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "./contexts/theme";
+import StoreWrapper from "./store";
+import QueryWrapper from "./query-client/QueryWrapper";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <QueryWrapper>
+      <StoreWrapper>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </StoreWrapper>
+    </QueryWrapper>
   </React.StrictMode>,
   document.getElementById("root")
 );
